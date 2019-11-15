@@ -1,0 +1,37 @@
+# jemdoc: menu{MENU}{acads.html}
+= Academics
+
+== Engineering
+/*Indian Institute of Technology Kanpur*/
+\nB.Tech-M.Tech. Dual-Degree, Computer Science and Engineering (2010 -- present)
+- Bachelor of Technology. 
+-- Cumulative Performance Index (CPI): +9.6/10.0+
+- Master of Technology 
+-- Cumulative Performance Index (CPI): +10.0/10.0+
+-- Ranked *first in the department* amongst the M.Tech. batch of 108 students.
+-- Advisor: Prof. [http://www.cse.iitk.ac.in/users/amit/ Amitabha Mukerjee]
+- Awarded the /Academic Excellence Award/ for 2010-11, 2011-12 and 2012-13
+- [courses.html List of courses].
+#~~~
+#{}{raw}
+
+#<courses>
+#<ul>
+#<li> Image Processing and Computer Vision </li>
+#<li> Natural Language Processing </li>
+#</ul>
+#</courses>
+#<button id="hide">Hide</button>
+#<button id="show">Show</button>
+#~~~
+
+== School
+G.M.S.S.S., Sector-35 D, Chandigarh (2008--2010)
+
+- Scored *94%* marks in /All India Senior Secondary Certificate Examination (AISSCE) 2010/.
+- Subjects taken: Mathematics, Computer Science, Physics, Chemistry, English.
+- Awarded the certificate of Merit for being in the *Top 0.1%* all over India in English Core. 
+
+Guru Nanak Public School, Sector-36 D Chandigarh (1996--2008)
+- Scored *94.6%* marks in /All India Secondary School Examination (AISSE) 2008/
+- Subjects taken: Mathematics, Science, Social Science, Introductory Information Technology, English, Hindi.

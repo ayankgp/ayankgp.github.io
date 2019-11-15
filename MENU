@@ -1,6 +1,14 @@
-
-    Home                [index.html]
-    Research			[research.html]
-	Publication         [publication.html]
-	Courses				[courses.html]
-  Activities			[activities.html]
+{{<div class="menu-head">Ashudeep Singh</div>}}
+	Home		[index.html]
+#Acads\n
+#	Academics	[acads.html]
+#	Courses		[courses.html]
+#	Achievements [awards.html]
+#Research\n
+#	Publications	[pubs.html]
+#	Internships	[internships.html]
+#	Projects	[projects.html]
+#Other\n
+#	Extra-curriculars	[extracurrics.html]
+	Resume [Resume_Ashudeep.pdf]
+	Contact		[contact.html]

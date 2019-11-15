@@ -1,14 +1,16 @@
 /* Default css file for jemdoc. */
 
 table#tlayout {
-	border: none;
-	border-collapse: separate;
-	background: white;
+    border: none;
+    border-collapse: separate;
+    background: white;
 }
 
 body {
 	background: white;
-	font-family: Georgia, serif;
+	/*font-family: 'Ubuntu', sans-serif;*/
+	font-family: "Verdana", Geneva, sans-serif;
+	font-size: 0.7em;
 	padding-bottom: 8px;
 	margin: 0;
 }
@@ -19,37 +21,36 @@ body {
 	padding-top: 0.5em;
 	padding-left: 8px;
 	padding-right: 8px;
-	font-size: 1.0em;
+	font-size: 1.05em;
 	width: auto;
 	white-space: nowrap;
-	text-align: left;
-	vertical-align: top;
+    text-align: left;
+    vertical-align: top;
+    line-height: 175%
 }
 
 #layout-menu td {
 	background: #f4f4f4;
-	vertical-align: top;
+    vertical-align: top;
 }
 
 #layout-content {
 	padding-top: 0.0em;
 	padding-left: 1.0em;
 	padding-right: 1.0em;
-	border: none;
-	background: white;
-	text-align: left;
-	vertical-align: top;
-	min-width: 800px;
-	width: 800px;
+    border: none;
+    background: white;
+    text-align: left;
+    vertical-align: top;
 }
 
 #layout-menu a {
-	line-height: 1.5em;
+	line-height: 1.0em;
 	margin-left: 0.5em;
 }
 
 tt {
-	background: #ffffdd;
+    background: #ffffdd;
 }
 
 pre, tt {
@@ -79,11 +80,25 @@ a:hover {
 }
 
 div.menu-category {
-	border-bottom: 1px solid gray;
-	margin-top: 0.8em;
-	padding-top: 0.2em;
-	padding-bottom: 0.1em;
-	font-weight: bold;
+	border-bottom: 1.0px solid #001;
+	border-radius: 50%;
+	margin-top: 0.0em;
+	padding-top: 0.0em;
+	margin-left: 0.20em;
+	margin-bottom: 0.0em;
+	font-size: 100%;
+	text-shadow: 1px 1px 1px #aaa;
+}
+
+div.menu-head {
+	border-bottom: 1.0px solid #001;
+	margin-top: 0.0em;
+	padding-top: 0.0em;
+	padding-bottom: 0.0em;
+	margin-bottom: 0.0em;
+	font-family: 'Dawning of a New Day', cursive;
+	font-size: 165%;
+	text-shadow: 1px 1px 1px #aaa;
 }
 
 div.menu-item {
@@ -138,7 +153,7 @@ h2 {
 }
 
 h2 + h3 {
-	padding-top: 0.2em;
+    padding-top: 0.2em;
 }
 
 h3 {
@@ -299,10 +314,7 @@ span.comment, span.comment > *, span.string, span.string > * {
 }
 
 @media print {
-	#layout-menu {
-		display: none;
-	}
-
+	#layout-menu { display: none; }
 }
 
 #fwtitle {
@@ -341,45 +353,32 @@ img.eqwl {
 }
 
 table {
-	border: 2px solid black;
-	border-collapse: collapse;
+    border: 2px solid black;
+    border-collapse: collapse;
 }
 
 td {
-	padding: 2px;
-	padding-left: 0.5em;
-	padding-right: 0.5em;
-	text-align: center;
-	border: 1px solid gray;
+    padding: 2px;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    text-align: center;
+    border: 1px solid gray;
 }
 
 table + table {
-	margin-top: 1em;
+    margin-top: 1em;
 }
 
 tr.heading {
-	font-weight: bold;
-	border-bottom: 2px solid black;
+    font-weight: bold;
+    border-bottom: 2px solid black;
 }
 
 img {
-	border: none;
+    border: none;
 }
 
 table.imgtable, table.imgtable td {
-	border: none;
-	text-align: left;
-}
-
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
-
-/* Create two equal columns that sits next to each other */
-.column {
-  flex: 50%;
-  padding: 0 4px;
+    border: none;
+    text-align: left;
 }
