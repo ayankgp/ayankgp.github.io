@@ -1,0 +1,77 @@
+## jemdoc: menu{Aero422Fall2019Menu}{aero422fall2019syllabus.html}, fwtitle
+= AERO 422 : Active Controls for Aerospace Vehicles
+
+*Instructor:* Niladri Das, niladridas@tamu.edu | *Office Hours:* TBD or by appointment
+
+*TA:* TBD | *Office Hours:* TBD or by appt.
+
+*Lecture:* Monday, Wednesday, & Friday  9:10am - 10:00am @ Reed-McDonald Building Room 202
+
+*PreReqs:* Undergraduate level AERO 321 Min. Grade of C or Undergraduate level AERO 421 Min. Grade of C
+
+*Course Duration:* August 26 - December 11, 2019
+
+*Final Exam Date:* December 9, 2019 8-10 a.m.
+
+*Catalog Description*\n
+Introduction to the Theory of Automatic Control specifically applied to aerospace vehicles; techniques for analysis and synthesis of linear control systems, stability criteria, systems response and performance criteria; design studies of active controls to improve aerospace vehicle performance.
+
+*Learning Outcomes or Course Objectives*\n
+
+. Introduction:  Signals and Systems | Laplace Transform | Transfer Function I | System Interconnection
+. Dynamic Response: Transfer Function II | Poles, Zeros, and Causality | Time Response | Stability Analysis
+. Basic Feedback Analysis & Design: Stabilizing Controller | Benefits of Feedback | System Type
+. PID Control Design: P Control | I Control | PI Control | PD Control | PID Control
+. Root Locus Design Method: Root Locus | Dynamic Compensator | Design Examples
+. Frequency Response Design Method: Frequency Response | Fourier Analysis | Bode Plot | Asymptotes | Steady-State | Stability | Design
+
+There are in-class tutorials which you are expected to work through. There are also homework assignments. For questions, please use to office hours.
+
+
+
+*Grading Policies* \n Your grade in this class will be based on the following:\n
+1. Problem Sets (50\%)\n
+2. Take-home Mid-term Exam(30\%)\n
+3. Final Exam (20\%)
+
+
+
+*Email* \n
+All Texas A&M students *should use their university-associated email accounts* when emailing the instructor and teaching assistants.
+
+*Textbook and/or Resource Material*\n
+No required textbooks. Course readings will include online texts, and other videos, resources, and materials provided by the instructor.\n
+**Optional textbooks: TBD**\n
+**Optional Course Lectures:** Dr. Raktim Bhattacharya's course notes for AERO-422 are *[https://isrlab.github.io/tutorials.html available here]*
+
+
+*Attendance and make-up policies*\n
+Attendance is mandatory for all classes and events. This course will follow the [http://student-rules.tamu.edu/rule07 University’s policy] if a student cannot complete assigned activities by their deadlines due to excused absences. Makeups for exams and other work will be allowed only for University excused absences and will be administered in compliance with university rules. Incompletes will not be given in this class.
+
+#As described in the grade section of this syllabus, a portion of each #student’s grade is based on in-class participation. This will be judged by the #instructor as **regular attendance** and **active engagement** on a consistent #basis that **contributes to the class** in some manner.
+
+*Homeworks*\n
+Homeworks are important and integral portions of the course. There is simply no way to learn without spending considerable time on your own working on problems. The homeworks will typically require time outside of the scheduled class. Homeworks *will  not be accepted for credit* unless covered by a University excused absence. It is your responsibility for keeping up with assignments. You should talk to your *TA* and or the *instructor* *BEFORE* late assignments become a problem.
+
+*Academic Integrity*\n
+Aggie Code of Honor. For many years Aggies have followed a Code of Honor, which is stated in this very simple verse:
+*"An Aggie does not lie, cheat or steal or tolerate those who do."*
+The Aggie Code of Honor is an effort to unify the aims of all Texas A&M men and women toward a high code of ethics and personal dignity. For most, living under this code will be no problem, as it asks nothing of a person that is beyond reason. It only calls for honesty and integrity, characteristics that Aggies have always exemplified. The Aggie Code of Honor functions as a symbol to all Aggies, promoting understanding and loyalty to truth and confidence in each other.
+For additional information please visit [http://aggiehonor.tamu.edu http://aggiehonor.tamu.edu].
+
+*Due Dates and Time Zones*\n
+All homework and other assignments will be due following the class that they were assigned, unless otherwise indicated on the assignment.
+
+*Texas A&M University Student Services*\n
+Texas A&M University offers a variety of student services to on-campus and online students:\n
+Service | Contact info:\n
+[http://distance.tamu.edu/Student-Services Student Assistance Services  ] | General Services Complex Suite 1501, 979-845-8201
+[http://disability.tamu.edu/ Services for Students with Disabilities  ] | Cain Hall Room B118, 979-845-1637
+[http://scs.tamu.edu Student Counseling Service ] | Cain Hall, 979-845-4427
+[https://scs.tamu.edu/?q=helpline Student Counseling Helpline] | 757 West Campus Blvd, 979-845-2700, 5:00pm-8:00am
+[http://writingcenter.tamu.edu/ University Writing Center ] | Evans Library Suite 1.214, 979-458-1455
+
+
+
+*Americans with Disabilities Act (ADA)*\n
+The Americans with Disabilities Act (ADA) is a federal anti-discrimination statute that provides comprehensive civil rights protection for persons with disabilities. Among other things, this legislation requires that all students with disabilities be guaranteed a learning environment that provides for reasonable accommodation of their disabilities. If you believe you have a disability requiring an accommodation, please contact Disability Services, currently located in the Disability Services building at the Student Services at White Creek complex on west campus or call 979-845-1637. For additional information, visit [http://disability.tamu.edu](http://disability.tamu.edu).

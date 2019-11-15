@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>tutorial2</title><script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    jax: ["input/TeX","output/HTML-CSS"],
+    extensions: ["[a11y]/accessibility-menu.js"],
+    'HTML-CSS': {
+      availableFonts: [],
+      webFont: 'TeX',
+      undefinedFamily: "serif",
+      mtextFontInherit: true,
+    },
+    TeX: {
+  "Macros": {
+    "A": "{\\boldsymbol{A}}",
+    "B": "{\\boldsymbol{B}}",
+    "C": "{\\boldsymbol{C}}",
+    "D": "{\\boldsymbol{D}}",
+    "I": "{\\boldsymbol{I}}",
+    "K": "{\\boldsymbol{K}}",
+    "M": "{\\boldsymbol{M}}",
+    "P": "{\\boldsymbol{P}}",
+    "Q": "{\\boldsymbol{Q}}",
+    "R": "{\\mathbb{R}}",
+    "T": "{\\boldsymbol{T}}",
+    "V": "{\\boldsymbol{V}}",
+    "Var": "{\\mathbb{E}[{#1}{#1}^T]}",
+    "W": "{\\boldsymbol{W}}",
+    "X": "{\\boldsymbol{X}}",
+    "Y": "{\\boldsymbol{Y}}",
+    "Z": "{\\boldsymbol{Z}}",
+    "a": "{\\boldsymbol{a}}",
+    "b": "{\\boldsymbol{b}}",
+    "th": "{\\theta}",
+    "x": "{\\boldsymbol{x}}",
+    "y": "{\\boldsymbol{y}}"
+  },
+  "equationNumbers": {
+    "autoNumber": "AMS",
+    "useLabelIds": false
+  },
+  "extensions": [
+    "AMSmath.js",
+    "AMSsymbols.js",
+    "noErrors.js",
+    "noUndefined.js",
+    "AMSmath.js"
+  ]
+},
+    showMathMenu: true
+  });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js"></script>
+    <style>body { padding: 0; margin: 0; }
+.markdown-preview-plus-view:not([data-use-github-style]) {
+  padding: 2em;
+  font-size: 1.2em;
+  color: #c5c8c6;
+  background-color: #1d1f21;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) span.critic.comment > span {
+  background-color: #1d1f21;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) > :first-child {
+  margin-top: 0;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) h1,
+.markdown-preview-plus-view:not([data-use-github-style]) h2,
+.markdown-preview-plus-view:not([data-use-github-style]) h3,
+.markdown-preview-plus-view:not([data-use-github-style]) h4,
+.markdown-preview-plus-view:not([data-use-github-style]) h5,
+.markdown-preview-plus-view:not([data-use-github-style]) h6 {
+  line-height: 1.2;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: #ffffff;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) h1 {
+  font-size: 2.4em;
+  font-weight: 300;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) h2 {
+  font-size: 1.8em;
+  font-weight: 400;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) h4 {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) h5 {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) h6 {
+  font-size: 1em;
+  font-weight: 600;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) strong {
+  color: #ffffff;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) del {
+  color: #9ba09d;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) a,
+.markdown-preview-plus-view:not([data-use-github-style]) a code {
+  color: white;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) img {
+  max-width: 100%;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) > p {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) > ul,
+.markdown-preview-plus-view:not([data-use-github-style]) > ol {
+  margin-bottom: 1.5em;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) blockquote {
+  margin: 1.5em 0;
+  font-size: inherit;
+  color: #9ba09d;
+  border-color: #43484c;
+  border-width: 4px;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) hr {
+  margin: 3em 0;
+  border-top: 2px dashed #43484c;
+  background: none;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) table {
+  margin: 1.5em 0;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) th {
+  color: #ffffff;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) th,
+.markdown-preview-plus-view:not([data-use-github-style]) td {
+  padding: 0.66em 1em;
+  border: 1px solid #43484c;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) pre,
+.markdown-preview-plus-view:not([data-use-github-style]) code {
+  color: #ffffff;
+  background-color: #303337;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) pre,
+.markdown-preview-plus-view:not([data-use-github-style]) pre.editor-colors {
+  margin: 1.5em 0;
+  padding: 1em;
+  font-size: 0.92em;
+  border-radius: 3px;
+  background-color: #27292c;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) kbd {
+  color: #ffffff;
+  border: 1px solid #43484c;
+  border-bottom: 2px solid #35393c;
+  background-color: #303337;
+}
+
+@include 'style-variables';
+.markdown-preview-plus-view {
+  display: block;
+  overflow-x: hidden;
+}
+.markdown-preview-plus-view .emoji {
+  max-width: 1em !important;
+}
+.markdown-preview-plus-view del {
+  text-decoration: none;
+  position: relative;
+}
+.markdown-preview-plus-view del::after {
+  border-bottom: 1px solid black;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+.markdown-preview-plus-view ul.contains-task-list li.task-list-item {
+  position: relative;
+  list-style-type: none;
+}
+.markdown-preview-plus-view ul.contains-task-list li.task-list-item input.task-list-item-checkbox {
+  position: absolute;
+  transform: translateX(-100%);
+  width: 30px;
+}
+.markdown-preview-plus-view span.critic.comment {
+  position: relative;
+}
+.markdown-preview-plus-view span.critic.comment::before {
+  content: '\1f4ac';
+  position: initial;
+}
+.markdown-preview-plus-view span.critic.comment > span {
+  display: none;
+}
+.markdown-preview-plus-view span.critic.comment:hover > span {
+  display: initial;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border: 1px solid;
+  border-radius: 5px;
+  max-height: 4em;
+  overflow: auto;
+}
+.markdown-preview-plus-view span.critic.comment:focus > span {
+  display: initial;
+  text-decoration: underline;
+  position: initial;
+  top: auto;
+  left: auto;
+  border: initial;
+  border-radius: initial;
+}
+
+body.markdown-preview-plus-view[data-use-github-style] {
+  overflow: initial !important;
+}
+.markdown-preview-plus-view[data-use-github-style] {
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  line-height: 1.6;
+  word-wrap: break-word;
+  padding: 30px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+}
+.markdown-preview-plus-view[data-use-github-style] > *:first-child {
+  margin-top: 0 !important;
+}
+.markdown-preview-plus-view[data-use-github-style] > *:last-child {
+  margin-bottom: 0 !important;
+}
+.markdown-preview-plus-view[data-use-github-style] a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+.markdown-preview-plus-view[data-use-github-style] .absent {
+  color: #c00;
+}
+.markdown-preview-plus-view[data-use-github-style] .anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+.markdown-preview-plus-view[data-use-github-style] .anchor:focus {
+  outline: none;
+}
+.markdown-preview-plus-view[data-use-github-style] h1,
+.markdown-preview-plus-view[data-use-github-style] h2,
+.markdown-preview-plus-view[data-use-github-style] h3,
+.markdown-preview-plus-view[data-use-github-style] h4,
+.markdown-preview-plus-view[data-use-github-style] h5,
+.markdown-preview-plus-view[data-use-github-style] h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+.markdown-preview-plus-view[data-use-github-style] h1 .octicon-link,
+.markdown-preview-plus-view[data-use-github-style] h2 .octicon-link,
+.markdown-preview-plus-view[data-use-github-style] h3 .octicon-link,
+.markdown-preview-plus-view[data-use-github-style] h4 .octicon-link,
+.markdown-preview-plus-view[data-use-github-style] h5 .octicon-link,
+.markdown-preview-plus-view[data-use-github-style] h6 .octicon-link {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+.markdown-preview-plus-view[data-use-github-style] h1:hover .anchor,
+.markdown-preview-plus-view[data-use-github-style] h2:hover .anchor,
+.markdown-preview-plus-view[data-use-github-style] h3:hover .anchor,
+.markdown-preview-plus-view[data-use-github-style] h4:hover .anchor,
+.markdown-preview-plus-view[data-use-github-style] h5:hover .anchor,
+.markdown-preview-plus-view[data-use-github-style] h6:hover .anchor {
+  padding-left: 8px;
+  margin-left: -30px;
+  text-decoration: none;
+}
+.markdown-preview-plus-view[data-use-github-style] h1:hover .anchor .octicon-link,
+.markdown-preview-plus-view[data-use-github-style] h2:hover .anchor .octicon-link,
+.markdown-preview-plus-view[data-use-github-style] h3:hover .anchor .octicon-link,
+.markdown-preview-plus-view[data-use-github-style] h4:hover .anchor .octicon-link,
+.markdown-preview-plus-view[data-use-github-style] h5:hover .anchor .octicon-link,
+.markdown-preview-plus-view[data-use-github-style] h6:hover .anchor .octicon-link {
+  display: inline-block;
+}
+.markdown-preview-plus-view[data-use-github-style] h1 tt,
+.markdown-preview-plus-view[data-use-github-style] h2 tt,
+.markdown-preview-plus-view[data-use-github-style] h3 tt,
+.markdown-preview-plus-view[data-use-github-style] h4 tt,
+.markdown-preview-plus-view[data-use-github-style] h5 tt,
+.markdown-preview-plus-view[data-use-github-style] h6 tt,
+.markdown-preview-plus-view[data-use-github-style] h1 code,
+.markdown-preview-plus-view[data-use-github-style] h2 code,
+.markdown-preview-plus-view[data-use-github-style] h3 code,
+.markdown-preview-plus-view[data-use-github-style] h4 code,
+.markdown-preview-plus-view[data-use-github-style] h5 code,
+.markdown-preview-plus-view[data-use-github-style] h6 code {
+  font-size: inherit;
+}
+.markdown-preview-plus-view[data-use-github-style] h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+.markdown-preview-plus-view[data-use-github-style] h1 .anchor {
+  line-height: 1;
+}
+.markdown-preview-plus-view[data-use-github-style] h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+.markdown-preview-plus-view[data-use-github-style] h2 .anchor {
+  line-height: 1;
+}
+.markdown-preview-plus-view[data-use-github-style] h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+.markdown-preview-plus-view[data-use-github-style] h3 .anchor {
+  line-height: 1.2;
+}
+.markdown-preview-plus-view[data-use-github-style] h4 {
+  font-size: 1.25em;
+}
+.markdown-preview-plus-view[data-use-github-style] h4 .anchor {
+  line-height: 1.2;
+}
+.markdown-preview-plus-view[data-use-github-style] h5 {
+  font-size: 1em;
+}
+.markdown-preview-plus-view[data-use-github-style] h5 .anchor {
+  line-height: 1.1;
+}
+.markdown-preview-plus-view[data-use-github-style] h6 {
+  font-size: 1em;
+  color: #777;
+}
+.markdown-preview-plus-view[data-use-github-style] h6 .anchor {
+  line-height: 1.1;
+}
+.markdown-preview-plus-view[data-use-github-style] p,
+.markdown-preview-plus-view[data-use-github-style] blockquote,
+.markdown-preview-plus-view[data-use-github-style] ul,
+.markdown-preview-plus-view[data-use-github-style] ol,
+.markdown-preview-plus-view[data-use-github-style] dl,
+.markdown-preview-plus-view[data-use-github-style] table,
+.markdown-preview-plus-view[data-use-github-style] pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.markdown-preview-plus-view[data-use-github-style] hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+.markdown-preview-plus-view[data-use-github-style] ul,
+.markdown-preview-plus-view[data-use-github-style] ol {
+  padding-left: 2em;
+}
+.markdown-preview-plus-view[data-use-github-style] ul.no-list,
+.markdown-preview-plus-view[data-use-github-style] ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+.markdown-preview-plus-view[data-use-github-style] ul ul,
+.markdown-preview-plus-view[data-use-github-style] ul ol,
+.markdown-preview-plus-view[data-use-github-style] ol ol,
+.markdown-preview-plus-view[data-use-github-style] ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.markdown-preview-plus-view[data-use-github-style] li > p {
+  margin-top: 16px;
+}
+.markdown-preview-plus-view[data-use-github-style] dl {
+  padding: 0;
+}
+.markdown-preview-plus-view[data-use-github-style] dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+.markdown-preview-plus-view[data-use-github-style] dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+.markdown-preview-plus-view[data-use-github-style] blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+.markdown-preview-plus-view[data-use-github-style] blockquote > :first-child {
+  margin-top: 0;
+}
+.markdown-preview-plus-view[data-use-github-style] blockquote > :last-child {
+  margin-bottom: 0;
+}
+.markdown-preview-plus-view[data-use-github-style] table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+.markdown-preview-plus-view[data-use-github-style] table th {
+  font-weight: bold;
+}
+.markdown-preview-plus-view[data-use-github-style] table th,
+.markdown-preview-plus-view[data-use-github-style] table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+.markdown-preview-plus-view[data-use-github-style] table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+.markdown-preview-plus-view[data-use-github-style] table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+.markdown-preview-plus-view[data-use-github-style] img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.markdown-preview-plus-view[data-use-github-style] .emoji {
+  max-width: none;
+}
+.markdown-preview-plus-view[data-use-github-style] span.frame {
+  display: block;
+  overflow: hidden;
+}
+.markdown-preview-plus-view[data-use-github-style] span.frame > span {
+  display: block;
+  float: left;
+  width: auto;
+  padding: 7px;
+  margin: 13px 0 0;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+.markdown-preview-plus-view[data-use-github-style] span.frame span img {
+  display: block;
+  float: left;
+}
+.markdown-preview-plus-view[data-use-github-style] span.frame span span {
+  display: block;
+  padding: 5px 0 0;
+  clear: both;
+  color: #333;
+}
+.markdown-preview-plus-view[data-use-github-style] span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+.markdown-preview-plus-view[data-use-github-style] span.align-center > span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: center;
+}
+.markdown-preview-plus-view[data-use-github-style] span.align-center span img {
+  margin: 0 auto;
+  text-align: center;
+}
+.markdown-preview-plus-view[data-use-github-style] span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+.markdown-preview-plus-view[data-use-github-style] span.align-right > span {
+  display: block;
+  margin: 13px 0 0;
+  overflow: hidden;
+  text-align: right;
+}
+.markdown-preview-plus-view[data-use-github-style] span.align-right span img {
+  margin: 0;
+  text-align: right;
+}
+.markdown-preview-plus-view[data-use-github-style] span.float-left {
+  display: block;
+  float: left;
+  margin-right: 13px;
+  overflow: hidden;
+}
+.markdown-preview-plus-view[data-use-github-style] span.float-left span {
+  margin: 13px 0 0;
+}
+.markdown-preview-plus-view[data-use-github-style] span.float-right {
+  display: block;
+  float: right;
+  margin-left: 13px;
+  overflow: hidden;
+}
+.markdown-preview-plus-view[data-use-github-style] span.float-right > span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: right;
+}
+.markdown-preview-plus-view[data-use-github-style] code,
+.markdown-preview-plus-view[data-use-github-style] tt {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+}
+.markdown-preview-plus-view[data-use-github-style] code:before,
+.markdown-preview-plus-view[data-use-github-style] tt:before,
+.markdown-preview-plus-view[data-use-github-style] code:after,
+.markdown-preview-plus-view[data-use-github-style] tt:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+.markdown-preview-plus-view[data-use-github-style] code br,
+.markdown-preview-plus-view[data-use-github-style] tt br {
+  display: none;
+}
+.markdown-preview-plus-view[data-use-github-style] del code {
+  text-decoration: inherit;
+}
+.markdown-preview-plus-view[data-use-github-style] pre > code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+.markdown-preview-plus-view[data-use-github-style] .highlight {
+  margin-bottom: 16px;
+}
+.markdown-preview-plus-view[data-use-github-style] .highlight pre,
+.markdown-preview-plus-view[data-use-github-style] pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+.markdown-preview-plus-view[data-use-github-style] .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+.markdown-preview-plus-view[data-use-github-style] pre {
+  word-wrap: normal;
+}
+.markdown-preview-plus-view[data-use-github-style] pre code,
+.markdown-preview-plus-view[data-use-github-style] pre tt {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+.markdown-preview-plus-view[data-use-github-style] pre code:before,
+.markdown-preview-plus-view[data-use-github-style] pre tt:before,
+.markdown-preview-plus-view[data-use-github-style] pre code:after,
+.markdown-preview-plus-view[data-use-github-style] pre tt:after {
+  content: normal;
+}
+.markdown-preview-plus-view[data-use-github-style] kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+.markdown-preview-plus-view[data-use-github-style] span.critic.comment > span {
+  background-color: #fff;
+}
+.markdown-preview-plus-view[data-use-github-style] a {
+  color: #337ab7;
+}
+.markdown-preview-plus-view[data-use-github-style] pre,
+.markdown-preview-plus-view[data-use-github-style] code {
+  color: inherit;
+}
+.markdown-preview-plus-view[data-use-github-style] pre,
+.markdown-preview-plus-view[data-use-github-style] pre.editor-colors {
+  padding: 0.8em 1em;
+  margin-bottom: 1em;
+  font-size: 0.85em;
+  border-radius: 4px;
+  overflow: auto;
+}
+
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+.line-number.bracket-matcher.bracket-matcher {
+  color: #c5c8c6;
+  background-color: rgba(255, 255, 255, 0.14);
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+pre.editor-colors {
+  background-color: #1d1f21;
+  color: #c5c8c6;
+}
+pre.editor-colors .invisible-character {
+  color: rgba(197, 200, 198, 0.2);
+}
+pre.editor-colors .indent-guide {
+  color: rgba(197, 200, 198, 0.2);
+}
+pre.editor-colors .wrap-guide {
+  background-color: rgba(197, 200, 198, 0.1);
+}
+pre.editor-colors .gutter {
+  background-color: #292c2f;
+}
+pre.editor-colors .gutter .cursor-line {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+pre.editor-colors .line-number.cursor-line-no-selection {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #fba0e3;
+}
+pre.editor-colors .invisible {
+  color: #c5c8c6;
+}
+pre.editor-colors .cursor {
+  border-color: white;
+}
+pre.editor-colors .selection .region {
+  background-color: #444;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-bottom: 1px solid #f8de7e;
+  margin-top: -1px;
+  opacity: .7;
+}
+.syntax--comment {
+  color: #7C7C7C;
+}
+.syntax--entity {
+  color: #FFD2A7;
+}
+.syntax--entity.syntax--name.syntax--type {
+  text-decoration: underline;
+  color: #FFFFB6;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: #9B5C2E;
+}
+.syntax--keyword {
+  color: #96CBFE;
+}
+.syntax--keyword.syntax--control {
+  color: #96CBFE;
+}
+.syntax--keyword.syntax--operator {
+  color: #EDEDED;
+}
+.syntax--storage {
+  color: #CFCB90;
+}
+.syntax--storage.syntax--modifier {
+  color: #96CBFE;
+}
+.syntax--constant {
+  color: #99CC99;
+}
+.syntax--constant.syntax--numeric {
+  color: #FF73FD;
+}
+.syntax--variable {
+  color: #C6C5FE;
+}
+.syntax--invalid.syntax--deprecated {
+  text-decoration: underline;
+  color: #FD5FF1;
+}
+.syntax--invalid.syntax--illegal {
+  color: #FD5FF1;
+  background-color: rgba(86, 45, 86, 0.75);
+}
+.syntax--string .syntax--source,
+.syntax--string .syntax--meta.syntax--embedded.syntax--line {
+  color: #EDEDED;
+}
+.syntax--string .syntax--punctuation.syntax--section.syntax--embedded {
+  color: #00A0A0;
+}
+.syntax--string .syntax--punctuation.syntax--section.syntax--embedded .syntax--source {
+  color: #00A0A0;
+}
+.syntax--string {
+  color: #A8FF60;
+}
+.syntax--string .syntax--constant {
+  color: #00A0A0;
+}
+.syntax--string.syntax--regexp {
+  color: #E9C062;
+}
+.syntax--string.syntax--regexp .syntax--constant.syntax--character.syntax--escape,
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded,
+.syntax--string.syntax--regexp .syntax--string.syntax--regexp.syntax--arbitrary-repetition {
+  color: #FF8000;
+}
+.syntax--string.syntax--regexp.syntax--group {
+  color: #C6A24F;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+.syntax--string.syntax--regexp.syntax--character-class {
+  color: #B18A3D;
+}
+.syntax--string .syntax--variable {
+  color: #8A9A95;
+}
+.syntax--support {
+  color: #FFFFB6;
+}
+.syntax--support.syntax--function {
+  color: #DAD085;
+}
+.syntax--support.syntax--constant {
+  color: #FFD2A7;
+}
+.syntax--support.syntax--type.syntax--property-name.syntax--css {
+  color: #EDEDED;
+}
+.syntax--source .syntax--entity.syntax--name.syntax--tag,
+.syntax--source .syntax--punctuation.syntax--tag {
+  color: #96CBFE;
+}
+.syntax--source .syntax--entity.syntax--other.syntax--attribute-name {
+  color: #FF73FD;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #FF73FD;
+}
+.syntax--entity.syntax--name.syntax--tag.syntax--namespace,
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--namespace {
+  color: #E18964;
+}
+.syntax--meta.syntax--preprocessor.syntax--c {
+  color: #8996A8;
+}
+.syntax--meta.syntax--preprocessor.syntax--c .syntax--keyword {
+  color: #AFC4DB;
+}
+.syntax--meta.syntax--cast {
+  color: #676767;
+}
+.syntax--meta.syntax--sgml.syntax--html .syntax--meta.syntax--doctype,
+.syntax--meta.syntax--sgml.syntax--html .syntax--meta.syntax--doctype .syntax--entity,
+.syntax--meta.syntax--sgml.syntax--html .syntax--meta.syntax--doctype .syntax--string,
+.syntax--meta.syntax--xml-processing,
+.syntax--meta.syntax--xml-processing .syntax--entity,
+.syntax--meta.syntax--xml-processing .syntax--string {
+  color: #494949;
+}
+.syntax--meta.syntax--tag .syntax--entity,
+.syntax--meta.syntax--tag > .syntax--punctuation,
+.syntax--meta.syntax--tag.syntax--inline .syntax--entity {
+  color: #FF73FD;
+}
+.syntax--meta.syntax--tag .syntax--name,
+.syntax--meta.syntax--tag.syntax--inline .syntax--name,
+.syntax--meta.syntax--tag > .syntax--punctuation {
+  color: #96CBFE;
+}
+.syntax--meta.syntax--selector.syntax--css .syntax--entity.syntax--name.syntax--tag {
+  text-decoration: underline;
+  color: #96CBFE;
+}
+.syntax--meta.syntax--selector.syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--tag.syntax--pseudo-class {
+  color: #8F9D6A;
+}
+.syntax--meta.syntax--selector.syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #8B98AB;
+}
+.syntax--meta.syntax--selector.syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--class {
+  color: #62B1FE;
+}
+.syntax--meta.syntax--property-group .syntax--support.syntax--constant.syntax--property-value.syntax--css,
+.syntax--meta.syntax--property-value .syntax--support.syntax--constant.syntax--property-value.syntax--css {
+  color: #F9EE98;
+}
+.syntax--meta.syntax--preprocessor.syntax--at-rule .syntax--keyword.syntax--control.syntax--at-rule {
+  color: #8693A5;
+}
+.syntax--meta.syntax--property-value .syntax--support.syntax--constant.syntax--named-color.syntax--css,
+.syntax--meta.syntax--property-value .syntax--constant {
+  color: #87C38A;
+}
+.syntax--meta.syntax--constructor.syntax--argument.syntax--css {
+  color: #8F9D6A;
+}
+.syntax--meta.syntax--diff,
+.syntax--meta.syntax--diff.syntax--header {
+  color: #F8F8F8;
+  background-color: #0E2231;
+}
+.syntax--meta.syntax--separator {
+  color: #60A633;
+  background-color: #242424;
+}
+.syntax--meta.syntax--line.syntax--entry.syntax--logfile,
+.syntax--meta.syntax--line.syntax--exit.syntax--logfile {
+  background-color: rgba(238, 238, 238, 0.16);
+}
+.syntax--meta.syntax--line.syntax--error.syntax--logfile {
+  background-color: #751012;
+}
+.syntax--source.syntax--gfm {
+  color: #999;
+}
+.syntax--gfm .syntax--markup.syntax--heading {
+  color: #eee;
+}
+.syntax--gfm .syntax--link {
+  color: #555;
+}
+.syntax--gfm .syntax--variable.syntax--list,
+.syntax--gfm .syntax--support.syntax--quote {
+  color: #555;
+}
+.syntax--gfm .syntax--link .syntax--entity {
+  color: #ddd;
+}
+.syntax--gfm .syntax--raw {
+  color: #aaa;
+}
+.syntax--markdown .syntax--paragraph {
+  color: #999;
+}
+.syntax--markdown .syntax--heading {
+  color: #eee;
+}
+.syntax--markdown .syntax--raw {
+  color: #aaa;
+}
+.syntax--markdown .syntax--link {
+  color: #555;
+}
+.syntax--markdown .syntax--link .syntax--string {
+  color: #555;
+}
+.syntax--markdown .syntax--link .syntax--string.syntax--title {
+  color: #ddd;
+}
+</style>
+
+  </head>
+  <body class="markdown-preview-plus-view" data-use-github-style>
+    <h1>Shurs Complement and Test for Positive Definiteness</h1>
+<p>The concept of&nbsp;Shur Complement&nbsp;has intrigued me for some time. I resorted to Prof. <a href="http://www.cis.upenn.edu/~jean">Jean Gallier’s</a> <a href="http://www.cis.upenn.edu/~jean/schur-comp.pdf">notes</a> on Shurs Complement to dig deep into it and own it.</p>
+<p>The story starts with simple linear equation:</p>
+<span class="math"><script type="math/tex; mode=display">\begin{bmatrix}\M\end{bmatrix}\begin{bmatrix}\x \\ \y\end{bmatrix} = \begin{bmatrix}\A & \B \\ \C & \D\end{bmatrix}\begin{bmatrix}\x \\ \y\end{bmatrix} = \begin{bmatrix}\a \\ \b\end{bmatrix}.
+</script></span>
+<p><span class="math"><script type="math/tex">\M</script></span> : <span class="math"><script type="math/tex">n\times n</script></span> matrix. <strong>[Known Matrix]</strong><br>
+<span class="math"><script type="math/tex">\A</script></span> : <span class="math"><script type="math/tex">(n-k)\times (n-k)</script></span> matrix.<br>
+<span class="math"><script type="math/tex">\B</script></span> : <span class="math"><script type="math/tex">(n-k)\times k</script></span> matrix.<br>
+<span class="math"><script type="math/tex">\C</script></span> : <span class="math"><script type="math/tex">k\times (n-k)</script></span> matrix.<br>
+<span class="math"><script type="math/tex">\A</script></span> : <span class="math"><script type="math/tex">k\times k</script></span> matrix.<br></p>
+<p>Accordingly,</p>
+<p><span class="math"><script type="math/tex">\x</script></span> : <span class="math"><script type="math/tex">(n-k)\times 1</script></span> vector.<br>
+<span class="math"><script type="math/tex">\y</script></span> : <span class="math"><script type="math/tex">k\times 1</script></span> vector.<br>
+<span class="math"><script type="math/tex">\a</script></span> : <span class="math"><script type="math/tex">(n-k)\times 1</script></span> vector. <strong>[Known Vector]</strong><br>
+<span class="math"><script type="math/tex">\b</script></span> : <span class="math"><script type="math/tex">k\times 1</script></span> vector. <strong>[Known Vector]</strong><br></p>
+<hr>
+<h4>Case I</h4>
+<p>If we assume that matrix <span class="math"><script type="math/tex">\A</script></span> is invertible, i.e. <span class="math"><script type="math/tex">\A^{-1}</script></span> exists, and <span class="math"><script type="math/tex">(\D-\C\A^{-1}\B)^{-1}</script></span> exists, then</p>
+<p><span class="math"><script type="math/tex">\begin{align}\M^{-1} = \begin{bmatrix}\A^{-1}+\A^{-1}\B(\D-\C\A^{-1}\B)^{-1} & -\A^{-1}\B(\D-\C\A^{-1}\B)^{-1}\\
+-(\D-\C\A^{-1}\B)^{-1}\C\A^{-1} & (\D-\C\A^{-1}\B)^{-1}\end{bmatrix} \label{ShurA}
+\end{align}</script></span></p>
+<p><strong>Shurs Complement of <span class="math"><script type="math/tex">\A</script></span> in <span class="math"><script type="math/tex">\M</script></span> is:</strong> <span class="math"><script type="math/tex">(\D-\C\A^{-1}\B)</script></span></p>
+<hr>
+<h4>Case II</h4>
+<p>If we assume that matrix <span class="math"><script type="math/tex">\D</script></span> is invertible, i.e. <span class="math"><script type="math/tex">\D^{-1}</script></span> exists, and <span class="math"><script type="math/tex">(\A-\B\D^{-1}\C)^{-1}</script></span> exists, then</p>
+<p><span class="math"><script type="math/tex">\begin{align}\M^{-1} = \begin{bmatrix}(\A-\B\D^{-1}\C)^{-1} & -(\A-\B\D^{-1}\C)^{-1}\B\D^{-1} \\
+-\D^{-1}\C(\A-\B\D^{-1}\C)^{-1} & \D^{-1}+\D^{-1}\C(\A-\B\D^{-1}\C)^{-1}\B\D^{-1}\end{bmatrix}\label{ShurD}\end{align}</script></span></p>
+<p><strong>Shurs Complement of <span class="math"><script type="math/tex">\D</script></span> in <span class="math"><script type="math/tex">\M</script></span> is:</strong> <span class="math"><script type="math/tex">(\A-\B\D^{-1}\C)</script></span></p>
+<hr>
+<p>Equation <span class="math"><script type="math/tex">\eqref{ShurA}</script></span> can be written as:</p>
+<p><span class="math"><script type="math/tex">\begin{align}\M^{-1} =
+&\begin{bmatrix}\A^{-1}+\A^{-1}\B(\D-\C\A^{-1}\B)^{-1} & -\A^{-1}\B(\D-\C\A^{-1}\B)^{-1}\\
+-(\D-\C\A^{-1}\B)^{-1}\C\A^{-1} & (\D-\C\A^{-1}\B)^{-1}\end{bmatrix} \nonumber\\
+=&\begin{bmatrix}
+\I & -\A^{-1}\B \\ 0  & I
+\end{bmatrix}
+\begin{bmatrix}
+ \A^{-1}  & 0 \\
+0 & (\D-\C\A^{-1}\B)^{-1}
+\end{bmatrix}
+\begin{bmatrix}
+\I & 0 \\ -\C\A^{-1} & I
+\end{bmatrix}.
+\end{align}</script></span></p>
+<p>Correspondingly,</p>
+<p><span class="math"><script type="math/tex">\begin{align}\M
+=&\begin{bmatrix}
+\I & 0 \\ \C\A^{-1} & I
+\end{bmatrix}
+\begin{bmatrix}
+ \A  & 0 \\
+0 & (\D-\C\A^{-1}\B)
+\end{bmatrix}
+\begin{bmatrix}
+\I & \A^{-1}\B \\ 0  & I
+\end{bmatrix}.\label{MAinv}
+\end{align}</script></span></p>
+<hr>
+<p>Equation <span class="math"><script type="math/tex">\eqref{ShurD}</script></span> can be written as:</p>
+<p><span class="math"><script type="math/tex">\begin{align}\M^{-1} =
+&\begin{bmatrix}(\A-\B\D^{-1}\C)^{-1} & -(\A-\B\D^{-1}\C)^{-1}\B\D^{-1} \\
+-\D^{-1}\C(\A-\B\D^{-1}\C)^{-1} & \D^{-1}+\D^{-1}\C(\A-\B\D^{-1}\C)^{-1}\B\D^{-1}\end{bmatrix} \nonumber\\
+=&\begin{bmatrix}
+\I & 0 \\ -\D^{-1}\C & I
+\end{bmatrix}
+\begin{bmatrix}
+(\A-\B\D^{-1}\C)^{-1} & 0 \\
+0 & \D^{-1}
+\end{bmatrix}
+\begin{bmatrix}
+\I & -\B\D^{-1} \\ 0 & I
+\end{bmatrix}
+\end{align}</script></span></p>
+<p>Correspondingly,</p>
+<p><span class="math"><script type="math/tex">\begin{align}\M
+=&\begin{bmatrix}
+\I & \B\D^{-1} \\ 0 & I
+\end{bmatrix}
+\begin{bmatrix}
+(\A-\B\D^{-1}\C) & 0 \\
+0 & \D
+\end{bmatrix}
+\begin{bmatrix}
+\I & 0 \\ \D^{-1}\C & I
+\end{bmatrix}\label{MDinv}
+\end{align}</script></span></p>
+<hr>
+<p>If assumptions of <strong>Case I</strong> and <strong>Case II</strong> are both satisfied then, first element of both Equation <span class="math"><script type="math/tex">\eqref{ShurA}</script></span> &amp; Equation <span class="math"><script type="math/tex">\eqref{ShurD}</script></span> gives the <a href="https://en.wikipedia.org/wiki/Woodbury_matrix_identity">Woodbury matrix identity</a>:</p>
+<span class="math"><script type="math/tex; mode=display">(\A-\B\D^{-1}\C)^{-1}=\A^{-1}+\A^{-1}\B(\D-\C\A^{-1}\B)^{-1}
+</script></span>
+<hr>
+<p>What we have with us up till now is an interesting representation of matrix <span class="math"><script type="math/tex">\M</script></span> <strong>if it is symmetric</strong>.
+If <span class="math"><script type="math/tex">\M</script></span> is symmetric we have the following</p>
+<ol>
+<li><span class="math"><script type="math/tex">\A</script></span> : Symmetric</li>
+<li><span class="math"><script type="math/tex">\D</script></span> : Symmetric</li>
+<li><span class="math"><script type="math/tex">\C = \B^{T}</script></span></li>
+</ol>
+<hr>
+<p>We are interested <strong>only in symmetric matrix</strong> because we eventually want to <strong>test the positivity</strong> of matrix <span class="math"><script type="math/tex">\M</script></span>. Hence, if we replace <span class="math"><script type="math/tex">\C</script></span> by <span class="math"><script type="math/tex">\B^T</script></span> in Equation <span class="math"><script type="math/tex">\eqref{MAinv}</script></span> and Equation <span class="math"><script type="math/tex">\eqref{MDinv}</script></span></p>
+<p><span class="math"><script type="math/tex">\begin{align}\M &= \P_1^T\begin{bmatrix}
+ \A  & 0 \\
+0 & (\D-\B^T\A^{-1}\B)
+\end{bmatrix}\P_1  = \P_1^T\X_1\P_1\\ &= \P_2^T\begin{bmatrix}
+(\A-\B\D^{-1}\B^T) & 0 \\
+0 & \D
+\end{bmatrix}\P_2 = \P_2^T\X_2\P_2\end{align}</script></span></p>
+<p><strong><a href="https://math.stackexchange.com/questions/2288067/inverse-of-a-symmetric-positive-definite-matrix">Property:</a></strong> For a <strong>symmetric positive matrix</strong> <span class="math"><script type="math/tex">\A</script></span> its inverse <span class="math"><script type="math/tex">\A^{-1}</script></span> is also <strong>positive and symmetric</strong>.<br></p>
+<p><strong>Observations:</strong></p>
+<ol>
+<li><span class="math"><script type="math/tex">\X_1</script></span> and <span class="math"><script type="math/tex">\X_2</script></span> are symmetric.</li>
+<li><span class="math"><script type="math/tex">\P_1</script></span> and <span class="math"><script type="math/tex">\P_2</script></span> are invertible.</li>
+</ol>
+<p><strong>Implies:</strong></p>
+<span class="math"><script type="math/tex; mode=display">\M\succ 0 \Longleftrightarrow \A \succ 0 \ \& \ (\D-\B^T\A^{-1}\B) \succ 0
+</script></span>
+<span class="math"><script type="math/tex; mode=display">\M\succ 0 \Longleftrightarrow \D \succ 0 \ \& \ (\A-\B\D^{-1}\B^T) \succ 0
+</script></span>
+<p><strong>Moreover:</strong></p>
+<ol>
+<li>If <span class="math"><script type="math/tex">\A \succ 0</script></span>, then <span class="math"><script type="math/tex">\M 	\succeq 0</script></span> iff <span class="math"><script type="math/tex">(\D-\B^T\A^{-1}\B) \succeq 0</script></span></li>
+<li>If <span class="math"><script type="math/tex">\D \succ 0</script></span>, then <span class="math"><script type="math/tex">\M 	\succeq 0</script></span> iff <span class="math"><script type="math/tex">(\A-\B\D^{-1}\B^T) \succeq 0</script></span></li>
+</ol>
+<hr>
+
+  </body>
+</html>

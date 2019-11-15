@@ -1,0 +1,33 @@
+h4 {
+  color: black;
+}
+
+footer {
+  color: black;
+
+}
+
+body {
+background-color: #F8F9F9;
+background-image: url("cream-paper.png");
+ clear:both; 
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+   text-decoration: none;
+}
+
+
+/* .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+} */

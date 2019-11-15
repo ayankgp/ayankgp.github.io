@@ -1,0 +1,41 @@
+<script type="text/javascript">
+function toggleMe(a){
+var e=document.getElementById(a);
+if(!e)return false;
+if(e.style.display=="block"){
+e.style.display="none"
+}
+else{
+e.style.display="block"
+}
+return false;
+}
+</script>
+<h2>Poster Presentation</h2>
+<ul>
+<li>U.S. Air Force Science and Technology 2030 (June 28-29, 2018)      <input type="button" onclick="return toggleMe('para1')" value="Poster"><br></li>
+
+
+<div id="para1" style="display:none">
+  <p><object data="Airforce2018.pdf&#10;" type="application/pdf" width="700px" height="400px">
+  <embed src="Airforce2018.pdf">
+  <p>This browser does not support PDFs. Please download the PDF to view it: <a href="Airforce2018.pdf">Download PDF</a>.</p>
+  </object>
+  </p>
+</div>
+
+
+<li>Texas Systems Day 2017 (March 31, 2017)      <input type="button" onclick="return toggleMe('para2')" value="Poster"><br></li>
+
+
+
+
+<div id="para2" style="display:none">
+  <p><object data="TexasSystemsDay2017.pdf&#10;" type="application/pdf" width="700px" height="400px">
+  <embed src="TexasSystemsDay2017.pdf">
+  <p>This browser does not support PDFs. Please download the PDF to view it: <a href="TexasSystemsDay2017.pdf">Download PDF</a>.</p>
+  </object>
+  </p>
+</div>
+
+</ul>

@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>tutorial3</title><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+jax: ["input/TeX","output/HTML-CSS"],
+extensions: [],
+TeX: {
+extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+},
+showMathMenu: false
+});
+</script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js">
+</script>
+    <style>body { padding: 0; margin: 0; }
+.markdown-preview-plus-view:not([data-use-github-style]) {
+  padding: 2em;
+  font-size: 1.2em;
+  color: #c5c8c6;
+  background-color: #1d1f21;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) > :first-child {
+  margin-top: 0;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) h1,
+.markdown-preview-plus-view:not([data-use-github-style]) h2,
+.markdown-preview-plus-view:not([data-use-github-style]) h3,
+.markdown-preview-plus-view:not([data-use-github-style]) h4,
+.markdown-preview-plus-view:not([data-use-github-style]) h5,
+.markdown-preview-plus-view:not([data-use-github-style]) h6 {
+  line-height: 1.2;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: #ffffff;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) h1 {
+  font-size: 2.4em;
+  font-weight: 300;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) h2 {
+  font-size: 1.8em;
+  font-weight: 400;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) h4 {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) h5 {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) h6 {
+  font-size: 1em;
+  font-weight: 600;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) strong {
+  color: #ffffff;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) del {
+  color: #9ba09d;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) a,
+.markdown-preview-plus-view:not([data-use-github-style]) a code {
+  color: white;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) img {
+  max-width: 100%;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) > p {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) > ul,
+.markdown-preview-plus-view:not([data-use-github-style]) > ol {
+  margin-bottom: 1.5em;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) blockquote {
+  margin: 1.5em 0;
+  font-size: inherit;
+  color: #9ba09d;
+  border-color: #43484c;
+  border-width: 4px;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) hr {
+  margin: 3em 0;
+  border-top: 2px dashed #43484c;
+  background: none;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) table {
+  margin: 1.5em 0;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) th {
+  color: #ffffff;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) th,
+.markdown-preview-plus-view:not([data-use-github-style]) td {
+  padding: 0.66em 1em;
+  border: 1px solid #43484c;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) pre,
+.markdown-preview-plus-view:not([data-use-github-style]) code {
+  color: #ffffff;
+  background-color: #303337;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) pre,
+.markdown-preview-plus-view:not([data-use-github-style]) pre.editor-colors {
+  margin: 1.5em 0;
+  padding: 1em;
+  font-size: 0.92em;
+  border-radius: 3px;
+  background-color: #27292c;
+}
+.markdown-preview-plus-view:not([data-use-github-style]) kbd {
+  color: #ffffff;
+  border: 1px solid #43484c;
+  border-bottom: 2px solid #35393c;
+  background-color: #303337;
+}
+
+@include 'style-variables';
+.markdown-preview-plus-view {
+  display: block;
+  overflow-x: hidden;
+}
+.markdown-preview-plus-view .emoji {
+  max-width: 1em !important;
+}
+.markdown-preview-plus-view del {
+  text-decoration: none;
+  position: relative;
+}
+.markdown-preview-plus-view del::after {
+  border-bottom: 1px solid black;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+.markdown-preview-plus-view .flash {
+  -webkit-animation: flash 1s ease-out;
+  -webkit-animation-iteration-count: 1;
+  outline: 1px solid rgba(255, 0, 0, 0);
+}
+.markdown-preview-plus-view .flash:not(li) {
+  display: block;
+}
+@-webkit-keyframes flash {
+  0% {
+    outline-color: rgba(255, 0, 0, 0);
+  }
+  50% {
+    outline-color: #ff0000;
+  }
+  100% {
+    outline-color: rgba(255, 0, 0, 0);
+  }
+}
+.markdown-preview-plus-view pre.editor-colors {
+  flex-direction: column;
+  overflow: auto;
+}
+.markdown-preview-plus-view ul.contains-task-list li.task-list-item {
+  position: relative;
+  list-style-type: none;
+}
+.markdown-preview-plus-view ul.contains-task-list li.task-list-item input.task-list-item-checkbox {
+  position: absolute;
+  transform: translateX(-100%);
+  width: 30px;
+}
+
+.markdown-preview-plus-view[data-use-github-style] {
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  line-height: 1.6;
+  word-wrap: break-word;
+  padding: 30px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+}
+.markdown-preview-plus-view[data-use-github-style] > *:first-child {
+  margin-top: 0 !important;
+}
+.markdown-preview-plus-view[data-use-github-style] > *:last-child {
+  margin-bottom: 0 !important;
+}
+.markdown-preview-plus-view[data-use-github-style] a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+.markdown-preview-plus-view[data-use-github-style] .absent {
+  color: #c00;
+}
+.markdown-preview-plus-view[data-use-github-style] .anchor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+.markdown-preview-plus-view[data-use-github-style] .anchor:focus {
+  outline: none;
+}
+.markdown-preview-plus-view[data-use-github-style] h1,
+.markdown-preview-plus-view[data-use-github-style] h2,
+.markdown-preview-plus-view[data-use-github-style] h3,
+.markdown-preview-plus-view[data-use-github-style] h4,
+.markdown-preview-plus-view[data-use-github-style] h5,
+.markdown-preview-plus-view[data-use-github-style] h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+.markdown-preview-plus-view[data-use-github-style] h1 .octicon-link,
+.markdown-preview-plus-view[data-use-github-style] h2 .octicon-link,
+.markdown-preview-plus-view[data-use-github-style] h3 .octicon-link,
+.markdown-preview-plus-view[data-use-github-style] h4 .octicon-link,
+.markdown-preview-plus-view[data-use-github-style] h5 .octicon-link,
+.markdown-preview-plus-view[data-use-github-style] h6 .octicon-link {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+.markdown-preview-plus-view[data-use-github-style] h1:hover .anchor,
+.markdown-preview-plus-view[data-use-github-style] h2:hover .anchor,
+.markdown-preview-plus-view[data-use-github-style] h3:hover .anchor,
+.markdown-preview-plus-view[data-use-github-style] h4:hover .anchor,
+.markdown-preview-plus-view[data-use-github-style] h5:hover .anchor,
+.markdown-preview-plus-view[data-use-github-style] h6:hover .anchor {
+  padding-left: 8px;
+  margin-left: -30px;
+  text-decoration: none;
+}
+.markdown-preview-plus-view[data-use-github-style] h1:hover .anchor .octicon-link,
+.markdown-preview-plus-view[data-use-github-style] h2:hover .anchor .octicon-link,
+.markdown-preview-plus-view[data-use-github-style] h3:hover .anchor .octicon-link,
+.markdown-preview-plus-view[data-use-github-style] h4:hover .anchor .octicon-link,
+.markdown-preview-plus-view[data-use-github-style] h5:hover .anchor .octicon-link,
+.markdown-preview-plus-view[data-use-github-style] h6:hover .anchor .octicon-link {
+  display: inline-block;
+}
+.markdown-preview-plus-view[data-use-github-style] h1 tt,
+.markdown-preview-plus-view[data-use-github-style] h2 tt,
+.markdown-preview-plus-view[data-use-github-style] h3 tt,
+.markdown-preview-plus-view[data-use-github-style] h4 tt,
+.markdown-preview-plus-view[data-use-github-style] h5 tt,
+.markdown-preview-plus-view[data-use-github-style] h6 tt,
+.markdown-preview-plus-view[data-use-github-style] h1 code,
+.markdown-preview-plus-view[data-use-github-style] h2 code,
+.markdown-preview-plus-view[data-use-github-style] h3 code,
+.markdown-preview-plus-view[data-use-github-style] h4 code,
+.markdown-preview-plus-view[data-use-github-style] h5 code,
+.markdown-preview-plus-view[data-use-github-style] h6 code {
+  font-size: inherit;
+}
+.markdown-preview-plus-view[data-use-github-style] h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+.markdown-preview-plus-view[data-use-github-style] h1 .anchor {
+  line-height: 1;
+}
+.markdown-preview-plus-view[data-use-github-style] h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+.markdown-preview-plus-view[data-use-github-style] h2 .anchor {
+  line-height: 1;
+}
+.markdown-preview-plus-view[data-use-github-style] h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+.markdown-preview-plus-view[data-use-github-style] h3 .anchor {
+  line-height: 1.2;
+}
+.markdown-preview-plus-view[data-use-github-style] h4 {
+  font-size: 1.25em;
+}
+.markdown-preview-plus-view[data-use-github-style] h4 .anchor {
+  line-height: 1.2;
+}
+.markdown-preview-plus-view[data-use-github-style] h5 {
+  font-size: 1em;
+}
+.markdown-preview-plus-view[data-use-github-style] h5 .anchor {
+  line-height: 1.1;
+}
+.markdown-preview-plus-view[data-use-github-style] h6 {
+  font-size: 1em;
+  color: #777;
+}
+.markdown-preview-plus-view[data-use-github-style] h6 .anchor {
+  line-height: 1.1;
+}
+.markdown-preview-plus-view[data-use-github-style] p,
+.markdown-preview-plus-view[data-use-github-style] blockquote,
+.markdown-preview-plus-view[data-use-github-style] ul,
+.markdown-preview-plus-view[data-use-github-style] ol,
+.markdown-preview-plus-view[data-use-github-style] dl,
+.markdown-preview-plus-view[data-use-github-style] table,
+.markdown-preview-plus-view[data-use-github-style] pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.markdown-preview-plus-view[data-use-github-style] hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+.markdown-preview-plus-view[data-use-github-style] ul,
+.markdown-preview-plus-view[data-use-github-style] ol {
+  padding-left: 2em;
+}
+.markdown-preview-plus-view[data-use-github-style] ul.no-list,
+.markdown-preview-plus-view[data-use-github-style] ol.no-list {
+  padding: 0;
+  list-style-type: none;
+}
+.markdown-preview-plus-view[data-use-github-style] ul ul,
+.markdown-preview-plus-view[data-use-github-style] ul ol,
+.markdown-preview-plus-view[data-use-github-style] ol ol,
+.markdown-preview-plus-view[data-use-github-style] ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.markdown-preview-plus-view[data-use-github-style] li > p {
+  margin-top: 16px;
+}
+.markdown-preview-plus-view[data-use-github-style] dl {
+  padding: 0;
+}
+.markdown-preview-plus-view[data-use-github-style] dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+.markdown-preview-plus-view[data-use-github-style] dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+.markdown-preview-plus-view[data-use-github-style] blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+.markdown-preview-plus-view[data-use-github-style] blockquote > :first-child {
+  margin-top: 0;
+}
+.markdown-preview-plus-view[data-use-github-style] blockquote > :last-child {
+  margin-bottom: 0;
+}
+.markdown-preview-plus-view[data-use-github-style] table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+.markdown-preview-plus-view[data-use-github-style] table th {
+  font-weight: bold;
+}
+.markdown-preview-plus-view[data-use-github-style] table th,
+.markdown-preview-plus-view[data-use-github-style] table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+.markdown-preview-plus-view[data-use-github-style] table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+.markdown-preview-plus-view[data-use-github-style] table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+.markdown-preview-plus-view[data-use-github-style] img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.markdown-preview-plus-view[data-use-github-style] .emoji {
+  max-width: none;
+}
+.markdown-preview-plus-view[data-use-github-style] span.frame {
+  display: block;
+  overflow: hidden;
+}
+.markdown-preview-plus-view[data-use-github-style] span.frame > span {
+  display: block;
+  float: left;
+  width: auto;
+  padding: 7px;
+  margin: 13px 0 0;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+.markdown-preview-plus-view[data-use-github-style] span.frame span img {
+  display: block;
+  float: left;
+}
+.markdown-preview-plus-view[data-use-github-style] span.frame span span {
+  display: block;
+  padding: 5px 0 0;
+  clear: both;
+  color: #333;
+}
+.markdown-preview-plus-view[data-use-github-style] span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+.markdown-preview-plus-view[data-use-github-style] span.align-center > span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: center;
+}
+.markdown-preview-plus-view[data-use-github-style] span.align-center span img {
+  margin: 0 auto;
+  text-align: center;
+}
+.markdown-preview-plus-view[data-use-github-style] span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+.markdown-preview-plus-view[data-use-github-style] span.align-right > span {
+  display: block;
+  margin: 13px 0 0;
+  overflow: hidden;
+  text-align: right;
+}
+.markdown-preview-plus-view[data-use-github-style] span.align-right span img {
+  margin: 0;
+  text-align: right;
+}
+.markdown-preview-plus-view[data-use-github-style] span.float-left {
+  display: block;
+  float: left;
+  margin-right: 13px;
+  overflow: hidden;
+}
+.markdown-preview-plus-view[data-use-github-style] span.float-left span {
+  margin: 13px 0 0;
+}
+.markdown-preview-plus-view[data-use-github-style] span.float-right {
+  display: block;
+  float: right;
+  margin-left: 13px;
+  overflow: hidden;
+}
+.markdown-preview-plus-view[data-use-github-style] span.float-right > span {
+  display: block;
+  margin: 13px auto 0;
+  overflow: hidden;
+  text-align: right;
+}
+.markdown-preview-plus-view[data-use-github-style] code,
+.markdown-preview-plus-view[data-use-github-style] tt {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+}
+.markdown-preview-plus-view[data-use-github-style] code:before,
+.markdown-preview-plus-view[data-use-github-style] tt:before,
+.markdown-preview-plus-view[data-use-github-style] code:after,
+.markdown-preview-plus-view[data-use-github-style] tt:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+.markdown-preview-plus-view[data-use-github-style] code br,
+.markdown-preview-plus-view[data-use-github-style] tt br {
+  display: none;
+}
+.markdown-preview-plus-view[data-use-github-style] del code {
+  text-decoration: inherit;
+}
+.markdown-preview-plus-view[data-use-github-style] pre > code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+.markdown-preview-plus-view[data-use-github-style] .highlight {
+  margin-bottom: 16px;
+}
+.markdown-preview-plus-view[data-use-github-style] .highlight pre,
+.markdown-preview-plus-view[data-use-github-style] pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+.markdown-preview-plus-view[data-use-github-style] .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+.markdown-preview-plus-view[data-use-github-style] pre {
+  word-wrap: normal;
+}
+.markdown-preview-plus-view[data-use-github-style] pre code,
+.markdown-preview-plus-view[data-use-github-style] pre tt {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+.markdown-preview-plus-view[data-use-github-style] pre code:before,
+.markdown-preview-plus-view[data-use-github-style] pre tt:before,
+.markdown-preview-plus-view[data-use-github-style] pre code:after,
+.markdown-preview-plus-view[data-use-github-style] pre tt:after {
+  content: normal;
+}
+.markdown-preview-plus-view[data-use-github-style] kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+.markdown-preview-plus-view[data-use-github-style] a {
+  color: #337ab7;
+}
+.markdown-preview-plus-view[data-use-github-style] pre,
+.markdown-preview-plus-view[data-use-github-style] code {
+  color: inherit;
+}
+.markdown-preview-plus-view[data-use-github-style] pre,
+.markdown-preview-plus-view[data-use-github-style] pre.editor-colors {
+  padding: 0.8em 1em;
+  margin-bottom: 1em;
+  font-size: 0.85em;
+  border-radius: 4px;
+  overflow: auto;
+}
+
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+.line-number.bracket-matcher.bracket-matcher {
+  color: #c5c8c6;
+  background-color: rgba(255, 255, 255, 0.14);
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+pre.editor-colors .gutter .line-number {
+  /* Use CSS specificity to force errors to override warnings and info markers */
+  /* Use CSS specificity to force warnings to override info markes. */
+}
+pre.editor-colors .gutter .line-number.latex-error,
+pre.editor-colors .gutter .line-number.latex-error.latex-warning,
+pre.editor-colors .gutter .line-number.latex-error.latex-info,
+pre.editor-colors .gutter .line-number.latex-error.latex-warning.latex-info {
+  border-left: 2px solid #c00;
+  padding-left: calc(0.5em - 2px);
+}
+pre.editor-colors .gutter .line-number.latex-warning,
+pre.editor-colors .gutter .line-number.latex-warning.latex-info {
+  border-left: 2px solid #ffaa2c;
+  padding-left: calc(0.5em - 2px);
+}
+pre.editor-colors .gutter .line-number.latex-info {
+  border-left: 2px solid #0098ff;
+  padding-left: calc(0.5em - 2px);
+}
+
+pre.editor-colors {
+  background-color: #1d1f21;
+  color: #c5c8c6;
+}
+pre.editor-colors .invisible-character {
+  color: rgba(197, 200, 198, 0.2);
+}
+pre.editor-colors .indent-guide {
+  color: rgba(197, 200, 198, 0.2);
+}
+pre.editor-colors .wrap-guide {
+  background-color: rgba(197, 200, 198, 0.1);
+}
+pre.editor-colors .gutter {
+  background-color: #292c2f;
+}
+pre.editor-colors .gutter .cursor-line {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+pre.editor-colors .line-number.cursor-line-no-selection {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #fba0e3;
+}
+pre.editor-colors .invisible {
+  color: #c5c8c6;
+}
+pre.editor-colors .cursor {
+  border-color: white;
+}
+pre.editor-colors .selection .region {
+  background-color: #444;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-bottom: 1px solid #f8de7e;
+  margin-top: -1px;
+  opacity: .7;
+}
+.syntax--comment {
+  color: #7C7C7C;
+}
+.syntax--entity {
+  color: #FFD2A7;
+}
+.syntax--entity.syntax--name.syntax--type {
+  text-decoration: underline;
+  color: #FFFFB6;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: #9B5C2E;
+}
+.syntax--keyword {
+  color: #96CBFE;
+}
+.syntax--keyword.syntax--control {
+  color: #96CBFE;
+}
+.syntax--keyword.syntax--operator {
+  color: #EDEDED;
+}
+.syntax--storage {
+  color: #CFCB90;
+}
+.syntax--storage.syntax--modifier {
+  color: #96CBFE;
+}
+.syntax--constant {
+  color: #99CC99;
+}
+.syntax--constant.syntax--numeric {
+  color: #FF73FD;
+}
+.syntax--variable {
+  color: #C6C5FE;
+}
+.syntax--invalid.syntax--deprecated {
+  text-decoration: underline;
+  color: #FD5FF1;
+}
+.syntax--invalid.syntax--illegal {
+  color: #FD5FF1;
+  background-color: rgba(86, 45, 86, 0.75);
+}
+.syntax--string .syntax--source,
+.syntax--string .syntax--meta.syntax--embedded.syntax--line {
+  color: #EDEDED;
+}
+.syntax--string .syntax--punctuation.syntax--section.syntax--embedded {
+  color: #00A0A0;
+}
+.syntax--string .syntax--punctuation.syntax--section.syntax--embedded .syntax--source {
+  color: #00A0A0;
+}
+.syntax--string {
+  color: #A8FF60;
+}
+.syntax--string .syntax--constant {
+  color: #00A0A0;
+}
+.syntax--string.syntax--regexp {
+  color: #E9C062;
+}
+.syntax--string.syntax--regexp .syntax--constant.syntax--character.syntax--escape,
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded,
+.syntax--string.syntax--regexp .syntax--string.syntax--regexp.syntax--arbitrary-repetition {
+  color: #FF8000;
+}
+.syntax--string.syntax--regexp.syntax--group {
+  color: #C6A24F;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+.syntax--string.syntax--regexp.syntax--character-class {
+  color: #B18A3D;
+}
+.syntax--string .syntax--variable {
+  color: #8A9A95;
+}
+.syntax--support {
+  color: #FFFFB6;
+}
+.syntax--support.syntax--function {
+  color: #DAD085;
+}
+.syntax--support.syntax--constant {
+  color: #FFD2A7;
+}
+.syntax--support.syntax--type.syntax--property-name.syntax--css {
+  color: #EDEDED;
+}
+.syntax--source .syntax--entity.syntax--name.syntax--tag,
+.syntax--source .syntax--punctuation.syntax--tag {
+  color: #96CBFE;
+}
+.syntax--source .syntax--entity.syntax--other.syntax--attribute-name {
+  color: #FF73FD;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #FF73FD;
+}
+.syntax--entity.syntax--name.syntax--tag.syntax--namespace,
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--namespace {
+  color: #E18964;
+}
+.syntax--meta.syntax--preprocessor.syntax--c {
+  color: #8996A8;
+}
+.syntax--meta.syntax--preprocessor.syntax--c .syntax--keyword {
+  color: #AFC4DB;
+}
+.syntax--meta.syntax--cast {
+  color: #676767;
+}
+.syntax--meta.syntax--sgml.syntax--html .syntax--meta.syntax--doctype,
+.syntax--meta.syntax--sgml.syntax--html .syntax--meta.syntax--doctype .syntax--entity,
+.syntax--meta.syntax--sgml.syntax--html .syntax--meta.syntax--doctype .syntax--string,
+.syntax--meta.syntax--xml-processing,
+.syntax--meta.syntax--xml-processing .syntax--entity,
+.syntax--meta.syntax--xml-processing .syntax--string {
+  color: #494949;
+}
+.syntax--meta.syntax--tag .syntax--entity,
+.syntax--meta.syntax--tag > .syntax--punctuation,
+.syntax--meta.syntax--tag.syntax--inline .syntax--entity {
+  color: #FF73FD;
+}
+.syntax--meta.syntax--tag .syntax--name,
+.syntax--meta.syntax--tag.syntax--inline .syntax--name,
+.syntax--meta.syntax--tag > .syntax--punctuation {
+  color: #96CBFE;
+}
+.syntax--meta.syntax--selector.syntax--css .syntax--entity.syntax--name.syntax--tag {
+  text-decoration: underline;
+  color: #96CBFE;
+}
+.syntax--meta.syntax--selector.syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--tag.syntax--pseudo-class {
+  color: #8F9D6A;
+}
+.syntax--meta.syntax--selector.syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #8B98AB;
+}
+.syntax--meta.syntax--selector.syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--class {
+  color: #62B1FE;
+}
+.syntax--meta.syntax--property-group .syntax--support.syntax--constant.syntax--property-value.syntax--css,
+.syntax--meta.syntax--property-value .syntax--support.syntax--constant.syntax--property-value.syntax--css {
+  color: #F9EE98;
+}
+.syntax--meta.syntax--preprocessor.syntax--at-rule .syntax--keyword.syntax--control.syntax--at-rule {
+  color: #8693A5;
+}
+.syntax--meta.syntax--property-value .syntax--support.syntax--constant.syntax--named-color.syntax--css,
+.syntax--meta.syntax--property-value .syntax--constant {
+  color: #87C38A;
+}
+.syntax--meta.syntax--constructor.syntax--argument.syntax--css {
+  color: #8F9D6A;
+}
+.syntax--meta.syntax--diff,
+.syntax--meta.syntax--diff.syntax--header {
+  color: #F8F8F8;
+  background-color: #0E2231;
+}
+.syntax--meta.syntax--separator {
+  color: #60A633;
+  background-color: #242424;
+}
+.syntax--meta.syntax--line.syntax--entry.syntax--logfile,
+.syntax--meta.syntax--line.syntax--exit.syntax--logfile {
+  background-color: rgba(238, 238, 238, 0.16);
+}
+.syntax--meta.syntax--line.syntax--error.syntax--logfile {
+  background-color: #751012;
+}
+.syntax--source.syntax--gfm {
+  color: #999;
+}
+.syntax--gfm .syntax--markup.syntax--heading {
+  color: #eee;
+}
+.syntax--gfm .syntax--link {
+  color: #555;
+}
+.syntax--gfm .syntax--variable.syntax--list,
+.syntax--gfm .syntax--support.syntax--quote {
+  color: #555;
+}
+.syntax--gfm .syntax--link .syntax--entity {
+  color: #ddd;
+}
+.syntax--gfm .syntax--raw {
+  color: #aaa;
+}
+.syntax--markdown .syntax--paragraph {
+  color: #999;
+}
+.syntax--markdown .syntax--heading {
+  color: #eee;
+}
+.syntax--markdown .syntax--raw {
+  color: #aaa;
+}
+.syntax--markdown .syntax--link {
+  color: #555;
+}
+.syntax--markdown .syntax--link .syntax--string {
+  color: #555;
+}
+.syntax--markdown .syntax--link .syntax--string.syntax--title {
+  color: #ddd;
+}
+</style>
+
+  </head>
+  <body class="markdown-preview-plus-view" data-use-github-style>
+    <h1>Markov Chain Monte Carlo</h1>
+<p>This is the body of the text</p>
+<p>Figure is below…</p>
+<p><span class="math"><script type="math/tex">123</script></span></p>
+<p><img src="../pics/test.svg" alt="Alt text"></p>
+<!-- <img src="./test.svg"> -->
+<!-- <img src="./test.svg" style="width:100%;height:100%;position:fixed;top:0;left:0;bottom:0;right:0;" /> -->
+<hr>
+<div style="height:200px;width:100%;border:3px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+<pre class="editor-colors lang-julia"><span class="syntax--source syntax--julia"><span class="syntax--comment syntax--line syntax--number-sign syntax--julia"><span class="syntax--punctuation syntax--definition syntax--comment syntax--julia"><span>#</span></span><span> workspace()</span><span></span></span></span>
+<span class="syntax--source syntax--julia"><span class="syntax--keyword syntax--control syntax--using syntax--julia"><span>using</span></span><span> JuMP</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span> GLPKMathProgInterface</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span> Distributions</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span> Plots</span></span>
+<span class="syntax--source syntax--julia"><span></span></span>
+<span class="syntax--source syntax--julia"><span class="syntax--comment syntax--line syntax--number-sign syntax--julia"><span class="syntax--punctuation syntax--definition syntax--comment syntax--julia"><span>#</span></span><span></span></span></span>
+<span class="syntax--source syntax--julia"><span class="syntax--keyword syntax--other syntax--julia"><span>function</span></span><span> </span><span class="syntax--entity syntax--name syntax--function syntax--julia"><span>hist3d</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>data</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span>binsizex</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span>binsizey</span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span></span>
+<span class="syntax--source syntax--julia"><span>    xmax </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--support syntax--function syntax--julia"><span>maximum</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>data</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span>:</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span></span>
+<span class="syntax--source syntax--julia"><span>    xmin </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--support syntax--function syntax--julia"><span>minimum</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>data</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span>:</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span></span>
+<span class="syntax--source syntax--julia"><span>    ymax </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--support syntax--function syntax--julia"><span>maximum</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>data</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span>:</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>2</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span></span>
+<span class="syntax--source syntax--julia"><span>    ymin </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--support syntax--function syntax--julia"><span>minimum</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>data</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span>:</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>2</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span></span>
+<span class="syntax--source syntax--julia"><span>    </span><span class="syntax--comment syntax--line syntax--number-sign syntax--julia"><span class="syntax--punctuation syntax--definition syntax--comment syntax--julia"><span>#</span></span><span> X grid point locations</span><span></span></span></span>
+<span class="syntax--source syntax--julia"><span>    xpoints </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--support syntax--function syntax--julia"><span>linspace</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>xmin</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span> xmax</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span> binsizex</span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>+</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span></span>
+<span class="syntax--source syntax--julia"><span>    ypoints </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--support syntax--function syntax--julia"><span>linspace</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>ymin</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span> ymax</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span> binsizey</span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>+</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span></span>
+<span class="syntax--source syntax--julia"><span>    </span><span class="syntax--comment syntax--line syntax--number-sign syntax--julia"><span class="syntax--punctuation syntax--definition syntax--comment syntax--julia"><span>#</span></span><span> Bins</span><span></span></span></span>
+<span class="syntax--source syntax--julia"><span>    bins </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--support syntax--function syntax--julia"><span>zeros</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>binsizex</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span>binsizey</span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span></span>
+<span class="syntax--source syntax--julia"><span>    </span><span class="syntax--comment syntax--line syntax--number-sign syntax--julia"><span class="syntax--punctuation syntax--definition syntax--comment syntax--julia"><span>#</span></span><span> Bin allocation</span><span></span></span></span>
+<span class="syntax--source syntax--julia"><span>    </span><span class="syntax--keyword syntax--control syntax--julia"><span>for</span></span><span> i </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--keyword syntax--operator syntax--range syntax--julia"><span>:</span></span><span class="syntax--support syntax--function syntax--julia"><span>size</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>data</span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span></span></span>
+<span class="syntax--source syntax--julia"><span>        tmp1 </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> data</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span>i</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>*</span></span><span class="syntax--support syntax--function syntax--julia"><span>ones</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>binsizex</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span><span> </span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>-</span></span><span> xpoints</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--keyword syntax--operator syntax--range syntax--julia"><span>:</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>end</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>-</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span><span>,</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span></span>
+<span class="syntax--source syntax--julia"><span>        </span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span>tmp1</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span>i</span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>tmp1</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span>i</span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span> </span><span class="syntax--keyword syntax--operator syntax--relation syntax--julia"><span>&gt;=</span></span><span> </span><span class="syntax--constant syntax--numeric syntax--julia"><span>0</span></span><span> ? </span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span> : </span><span class="syntax--constant syntax--numeric syntax--julia"><span>0</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span><span> </span><span class="syntax--keyword syntax--control syntax--julia"><span>for</span></span><span> i </span><span class="syntax--keyword syntax--operator syntax--relation syntax--julia"><span>in</span></span><span> </span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--keyword syntax--operator syntax--range syntax--julia"><span>:</span></span><span>binsizex</span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span></span>
+<span class="syntax--source syntax--julia"><span>        xbinindx </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--support syntax--function syntax--julia"><span>Int</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--support syntax--function syntax--julia"><span>sum</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>tmp1</span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span><span>)</span></span></span>
+<span class="syntax--source syntax--julia"><span>        </span><span class="syntax--comment syntax--line syntax--number-sign syntax--julia"><span class="syntax--punctuation syntax--definition syntax--comment syntax--julia"><span>#</span></span><span> print(tmp1)</span><span></span></span></span>
+<span class="syntax--source syntax--julia"><span>        </span><span class="syntax--keyword syntax--control syntax--julia"><span>if</span></span><span> xbinindx</span><span class="syntax--keyword syntax--operator syntax--relation syntax--julia"><span>==</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>0</span></span></span>
+<span class="syntax--source syntax--julia"><span>            </span><span class="syntax--support syntax--function syntax--julia"><span>error</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--string syntax--quoted syntax--double syntax--julia"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--julia"><span>"</span></span><span>Zero in column 1 not possible</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--julia"><span>"</span></span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span></span>
+<span class="syntax--source syntax--julia"><span>        </span><span class="syntax--keyword syntax--control syntax--end syntax--julia"><span>end</span></span></span>
+<span class="syntax--source syntax--julia"><span>        tmp2 </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> data</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span>i</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>2</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>*</span></span><span class="syntax--support syntax--function syntax--julia"><span>ones</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>binsizey</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span><span> </span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>-</span></span><span> ypoints</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--keyword syntax--operator syntax--range syntax--julia"><span>:</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>end</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>-</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span><span>,</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span></span>
+<span class="syntax--source syntax--julia"><span>        </span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span>tmp2</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span>i</span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>tmp2</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span>i</span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span> </span><span class="syntax--keyword syntax--operator syntax--relation syntax--julia"><span>&gt;=</span></span><span> </span><span class="syntax--constant syntax--numeric syntax--julia"><span>0</span></span><span> ? </span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span> : </span><span class="syntax--constant syntax--numeric syntax--julia"><span>0</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span><span> </span><span class="syntax--keyword syntax--control syntax--julia"><span>for</span></span><span> i </span><span class="syntax--keyword syntax--operator syntax--relation syntax--julia"><span>in</span></span><span> </span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--keyword syntax--operator syntax--range syntax--julia"><span>:</span></span><span>binsizey</span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span></span>
+<span class="syntax--source syntax--julia"><span>        ybinindx </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--support syntax--function syntax--julia"><span>Int</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--support syntax--function syntax--julia"><span>sum</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>tmp2</span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span><span>)</span></span></span>
+<span class="syntax--source syntax--julia"><span>        </span><span class="syntax--keyword syntax--control syntax--julia"><span>if</span></span><span> ybinindx</span><span class="syntax--keyword syntax--operator syntax--relation syntax--julia"><span>==</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>0</span></span></span>
+<span class="syntax--source syntax--julia"><span>            </span><span class="syntax--support syntax--function syntax--julia"><span>error</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--string syntax--quoted syntax--double syntax--julia"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--julia"><span>"</span></span><span>Zero in column 2 not possible</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--julia"><span>"</span></span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span></span>
+<span class="syntax--source syntax--julia"><span>        </span><span class="syntax--keyword syntax--control syntax--end syntax--julia"><span>end</span></span></span>
+<span class="syntax--source syntax--julia"><span>        bins</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span>xbinindx</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span>ybinindx</span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span> </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> bins</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span>xbinindx</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span>ybinindx</span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span> </span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>+</span></span><span> </span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span></span>
+<span class="syntax--source syntax--julia"><span>    </span><span class="syntax--keyword syntax--control syntax--end syntax--julia"><span>end</span></span></span>
+<span class="syntax--source syntax--julia"><span>    </span><span class="syntax--keyword syntax--control syntax--julia"><span>return</span></span><span> bins </span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span> xpoints</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span> ypoints</span></span>
+<span class="syntax--source syntax--julia"><span class="syntax--keyword syntax--control syntax--end syntax--julia"><span>end</span></span></span>
+<span class="syntax--source syntax--julia"><span class="syntax--comment syntax--line syntax--number-sign syntax--julia"><span class="syntax--punctuation syntax--definition syntax--comment syntax--julia"><span>#</span></span><span> target un-normalised density is a Gaussian</span><span></span></span></span>
+<span class="syntax--source syntax--julia"><span>mu_t </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>0.0</span></span><span>;</span><span class="syntax--constant syntax--numeric syntax--julia"><span>0.0</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span></span>
+<span class="syntax--source syntax--julia"><span>sig_t </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>3.0</span></span><span> </span><span class="syntax--constant syntax--numeric syntax--julia"><span>0</span></span><span>;</span><span class="syntax--constant syntax--numeric syntax--julia"><span>0</span></span><span> </span><span class="syntax--constant syntax--numeric syntax--julia"><span>3.0</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span></span>
+<span class="syntax--source syntax--julia"><span class="syntax--entity syntax--name syntax--function syntax--julia"><span>f1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>x</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span>y</span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span><span> </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>/</span></span><span class="syntax--support syntax--function syntax--julia"><span>sqrt</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span><span>(</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>2</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>*</span></span><span>pi</span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>^</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>2</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>*</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>9</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span><span>)</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>*</span></span><span class="syntax--support syntax--function syntax--julia"><span>exp</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>-</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>0.5</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>*</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span>x;y</span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>-</span></span><span>mu_t</span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span><span class="syntax--keyword syntax--operator syntax--transposed-func syntax--julia"><span>'</span></span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>*</span></span><span class="syntax--support syntax--function syntax--julia"><span>inv</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>sig_t</span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>*</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span>x;y</span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>-</span></span><span>mu_t</span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span><span>)</span></span></span>
+<span class="syntax--source syntax--julia"><span class="syntax--comment syntax--line syntax--number-sign syntax--julia"><span class="syntax--punctuation syntax--definition syntax--comment syntax--julia"><span>#</span></span><span> Proposal density is a Gaussian</span><span></span></span></span>
+<span class="syntax--source syntax--julia"><span class="syntax--comment syntax--line syntax--number-sign syntax--julia"><span class="syntax--punctuation syntax--definition syntax--comment syntax--julia"><span>#</span></span><span> Generate samples from a Gaussian Distribution</span><span></span></span></span>
+<span class="syntax--source syntax--julia"><span class="syntax--entity syntax--name syntax--function syntax--julia"><span>f2</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>x</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span>y</span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span><span> </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--support syntax--function syntax--julia"><span>rand</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>Distributions</span><span class="syntax--keyword syntax--operator syntax--dots syntax--julia"><span>.</span></span><span class="syntax--support syntax--function syntax--julia"><span>MvNormal</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span>x</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span>y</span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span> </span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1.5</span></span><span> </span><span class="syntax--constant syntax--numeric syntax--julia"><span>.0</span></span><span>; </span><span class="syntax--constant syntax--numeric syntax--julia"><span>.0</span></span><span> </span><span class="syntax--constant syntax--numeric syntax--julia"><span>1.5</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span><span>,</span></span><span> </span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span></span>
+<span class="syntax--source syntax--julia"><span class="syntax--comment syntax--line syntax--number-sign syntax--julia"><span class="syntax--punctuation syntax--definition syntax--comment syntax--julia"><span>#</span></span><span> Initial state for Markov Chain</span><span></span></span></span>
+<span class="syntax--source syntax--julia"><span>x_start </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>3</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>3</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span></span>
+<span class="syntax--source syntax--julia"><span>samples </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> Float64</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span><span>]</span></span></span></span>
+<span class="syntax--source syntax--julia"><span>N </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--constant syntax--numeric syntax--julia"><span>50000</span></span></span>
+<span class="syntax--source syntax--julia"><span class="syntax--keyword syntax--control syntax--julia"><span>for</span></span><span> i </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--keyword syntax--operator syntax--range syntax--julia"><span>:</span></span><span>N</span><span></span></span>
+<span class="syntax--source syntax--julia"><span>    </span><span class="syntax--comment syntax--line syntax--number-sign syntax--julia"><span class="syntax--punctuation syntax--definition syntax--comment syntax--julia"><span>#</span></span><span> First choose a jump state</span><span></span></span></span>
+<span class="syntax--source syntax--julia"><span>    x_jump </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--support syntax--function syntax--julia"><span>map</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>f2</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span>x_start</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span>x_start</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>2</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span></span>
+<span class="syntax--source syntax--julia"><span>    </span><span class="syntax--comment syntax--line syntax--number-sign syntax--julia"><span class="syntax--punctuation syntax--definition syntax--comment syntax--julia"><span>#</span></span><span> Evaluate likelihood ratio</span><span></span></span></span>
+<span class="syntax--source syntax--julia"><span>    lr </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--support syntax--function syntax--julia"><span>map</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>f1</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span>x_jump</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span>x_jump</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>2</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>/</span></span><span class="syntax--support syntax--function syntax--julia"><span>map</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>f1</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span>x_start</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span>x_start</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>2</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span></span>
+<span class="syntax--source syntax--julia"><span>    </span><span class="syntax--comment syntax--line syntax--number-sign syntax--julia"><span class="syntax--punctuation syntax--definition syntax--comment syntax--julia"><span>#</span></span><span></span></span></span>
+<span class="syntax--source syntax--julia"><span>    </span><span class="syntax--keyword syntax--control syntax--julia"><span>if</span></span><span> lr </span><span class="syntax--keyword syntax--operator syntax--relation syntax--julia"><span>&gt;=</span></span><span> </span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span></span>
+<span class="syntax--source syntax--julia"><span>        x_start </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> x_jump</span></span>
+<span class="syntax--source syntax--julia"><span>    </span><span class="syntax--keyword syntax--control syntax--julia"><span>else</span></span></span>
+<span class="syntax--source syntax--julia"><span>        x_start </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--support syntax--function syntax--julia"><span>rand</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--support syntax--function syntax--julia"><span>Uniform</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>0</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span><span>,</span></span><span> </span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span> </span><span class="syntax--keyword syntax--operator syntax--relation syntax--julia"><span>&lt;=</span></span><span> lr ? x_jump : x_start</span></span>
+<span class="syntax--source syntax--julia"><span>    </span><span class="syntax--keyword syntax--control syntax--end syntax--julia"><span>end</span></span></span>
+<span class="syntax--source syntax--julia"><span>    </span><span class="syntax--keyword syntax--control syntax--julia"><span>if</span></span><span> i </span><span class="syntax--keyword syntax--operator syntax--relation syntax--julia"><span>&gt;</span></span><span> </span><span class="syntax--constant syntax--numeric syntax--julia"><span>3</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>*</span></span><span>N</span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>/</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>4</span></span></span>
+<span class="syntax--source syntax--julia"><span>        samples </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span>samples;</span><span>x_start</span><span class="syntax--keyword syntax--operator syntax--transposed-variable syntax--julia"><span>'</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span></span>
+<span class="syntax--source syntax--julia"><span>    </span><span class="syntax--keyword syntax--control syntax--end syntax--julia"><span>end</span></span></span>
+<span class="syntax--source syntax--julia"><span class="syntax--keyword syntax--control syntax--end syntax--julia"><span>end</span></span></span>
+<span class="syntax--source syntax--julia"><span></span></span>
+<span class="syntax--source syntax--julia"><span>mean_x1 </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--support syntax--function syntax--julia"><span>sum</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>samples</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span>:</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>/</span></span><span class="syntax--support syntax--function syntax--julia"><span>size</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>samples</span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span></span>
+<span class="syntax--source syntax--julia"><span>sigma_x1 </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>/</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--support syntax--function syntax--julia"><span>size</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>samples</span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>-</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span><span>)</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>*</span></span><span class="syntax--support syntax--function syntax--julia"><span>sum</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span><span>(</span></span><span>samples</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span>:</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>-</span></span><span>mean_x1</span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>*</span></span><span class="syntax--support syntax--function syntax--julia"><span>ones</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--support syntax--function syntax--julia"><span>size</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>samples</span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span><span>)</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>.^</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>2</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span></span>
+<span class="syntax--source syntax--julia"><span>mean_x2 </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--support syntax--function syntax--julia"><span>sum</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>samples</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span>:</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>2</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>/</span></span><span class="syntax--support syntax--function syntax--julia"><span>size</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>samples</span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span></span>
+<span class="syntax--source syntax--julia"><span>sigma_x2 </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>/</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--support syntax--function syntax--julia"><span>size</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>samples</span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>-</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span><span>)</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>*</span></span><span class="syntax--support syntax--function syntax--julia"><span>sum</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span><span>(</span></span><span>samples</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span>:</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>2</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>-</span></span><span>mean_x2</span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>*</span></span><span class="syntax--support syntax--function syntax--julia"><span>ones</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--support syntax--function syntax--julia"><span>size</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>samples</span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span><span>)</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>.^</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>2</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span></span>
+<span class="syntax--source syntax--julia"><span>sigma_x2 </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>/</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--support syntax--function syntax--julia"><span>size</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>samples</span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>-</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span><span>)</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>*</span></span><span class="syntax--support syntax--function syntax--julia"><span>sum</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span><span>(</span></span><span>samples</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span>:</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>-</span></span><span>mean_x1</span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>*</span></span><span class="syntax--support syntax--function syntax--julia"><span>ones</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--support syntax--function syntax--julia"><span>size</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>samples</span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span><span>)</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>.*</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>samples</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span>:</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>2</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>-</span></span><span>mean_x2</span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>*</span></span><span class="syntax--support syntax--function syntax--julia"><span>ones</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--support syntax--function syntax--julia"><span>size</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>samples</span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span><span>)</span><span>)</span></span></span>
+<span class="syntax--source syntax--julia"><span></span></span>
+<span class="syntax--source syntax--julia"><span>Plots</span><span class="syntax--keyword syntax--operator syntax--dots syntax--julia"><span>.</span></span><span class="syntax--support syntax--function syntax--julia"><span>histogram</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>samples</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span>:</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>2</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span> normed</span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span class="syntax--constant syntax--language syntax--julia"><span>true</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span></span>
+<span class="syntax--source syntax--julia"><span>    legend</span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span class="syntax--constant syntax--other syntax--symbol syntax--julia"><span>:none</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span></span>
+<span class="syntax--source syntax--julia"><span>    titlefont</span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span class="syntax--support syntax--function syntax--julia"><span>font</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>9</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span><span>,</span></span></span>
+<span class="syntax--source syntax--julia"><span>    color</span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span class="syntax--constant syntax--other syntax--symbol syntax--julia"><span>:red</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span></span>
+<span class="syntax--source syntax--julia"><span>    bins</span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>120</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span></span>
+<span class="syntax--source syntax--julia"><span class="syntax--comment syntax--line syntax--number-sign syntax--julia"><span class="syntax--punctuation syntax--definition syntax--comment syntax--julia"><span>#</span></span><span> Marginal</span><span></span></span></span>
+<span class="syntax--source syntax--julia"><span class="syntax--entity syntax--name syntax--function syntax--julia"><span>f3</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>x</span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span><span> </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>/</span></span><span class="syntax--support syntax--function syntax--julia"><span>sqrt</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>2</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>*</span></span><span>pi</span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>*</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>3</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span><span>)</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>*</span></span><span class="syntax--support syntax--function syntax--julia"><span>exp</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>-</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>0.5</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>*</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>x</span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>-</span></span><span>mu_t</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>*</span></span><span class="syntax--support syntax--function syntax--julia"><span>inv</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>sig_t</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>*</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>x</span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>-</span></span><span>mu_t</span><span class="syntax--meta syntax--array syntax--julia"><span class="syntax--meta syntax--bracket syntax--julia"><span>[</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>1</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>]</span></span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span><span>)</span></span></span>
+<span class="syntax--source syntax--julia"><span></span></span>
+<span class="syntax--source syntax--julia"><span>Plots</span><span class="syntax--keyword syntax--operator syntax--dots syntax--julia"><span>.</span></span><span class="syntax--support syntax--function syntax--julia"><span>plot!</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>(</span></span><span>f3</span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span class="syntax--keyword syntax--operator syntax--arithmetic syntax--julia"><span>-</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>10</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span class="syntax--constant syntax--numeric syntax--julia"><span>10</span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>,</span></span><span>color </span><span class="syntax--keyword syntax--operator syntax--update syntax--julia"><span>=</span></span><span> </span><span class="syntax--string syntax--quoted syntax--double syntax--julia"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--julia"><span>"</span></span><span>blue</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--julia"><span>"</span></span></span><span class="syntax--meta syntax--bracket syntax--julia"><span>)</span></span></span>
+</pre>
+</div>
+
+  </body>
+</html>

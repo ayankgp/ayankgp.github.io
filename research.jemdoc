@@ -1,0 +1,56 @@
+# jemdoc: menu{MENU}{research.html}, fwtitle
+= Research
+
+== Sensor Architecture Design
+Sensors are in integral part of a system, providing knowledge about system states, through state
+filtering, which can further be utilized to control the system. The problem of sensor design addresses questions
+regarding, $\color{red}{{}^1}$which type of sensors do we need, $\color{red}{{}^2}$how accurate sensors do we need, and $\color{red}{{}^3}$when and where do we use
+them for a particular type of filtering scheme.
+- Applications:
+-- Flow Estimation, Sensor Scheduling for Communication Networks, Power Grid, Distributed sensing for Swarm Robots etc.
+- Publications:
+-- \[Journal\] N. Das, R. Bhattacharya, \"\ Sensor Precision Selection For Kalman Filtering."\ (manuscript in preparation)
+-- \[Conference\] N. Das, R. Bhattacharya, \"\Sparse Sensing Architecture For Kalman Filtering With Guaranteed Error Bound."\, in *[http://reg.conferences.dce.ufl.edu/docs/ICSSA/ICSSA2017Stats.pdf 1st IAA Conference on Space Situational Awareness]*, Orlando, Florida, 2017. [https://www.researchgate.net/publication/328898441_Sparse_Sensing_Architecture_For_Kalman_Filtering_With_Guarenteed_Error_Bound (Researchgate-PDF)]
+
+== Situational Awareness
+- *Space Situational Awareness*\n
+Space situational awareness (SSA) refers to the ability to view, understand and predict the
+physical location of natural and manmade objects in orbit around the Earth.  Our research leverages upon a non-linear filtering technique known as Optimal Transport filter, to provide better probabilistic information about states of each of those space objects.
+- *Collision Probability Calculation*\n
+
+
+  - Publications:
+    -- \[Conference\] C. Shelton, N. Das, J. Junkins, R. Bhattacharya, \"Risk Quantification in Dynamical Systems with Bounded Nonparametric Uncertainty\", *2019 Astrodynamics Specialist Conference*, Portland, ME (accepted for presentation, Aug 11-15).
+    -- \[Journal\] N. Das, R. P. Ghosh,  N. Guha , R. Bhattacharya, B. Mallick, \"Optimal Transport Based Tracking of Space Objects in Cylindrical Manifolds.\",  *[http://astronautical.org/publications/journal/ The Journal of the Astronautical Sciences]* ( Accepted, 2019)[https://www.researchgate.net/publication/319357580_Optimal_Transport_Based_Tracking_of_Space_Objects_in_Cylindrical_Manifolds (Preprint)] [https://urldefense.proofpoint.com/v2/url?u=http-3A__em.rdcu.be_wf_click-3Fupn-3DlMZy1lernSJ7apc5DgYM8Qg-2D2BC4y1IYW2QsBkxUuDZYQ-2D3D-5FNN8q6Obt-2D2FD2oN4H-2D2FUdBHuaz7eyy5ZkfyN2LVa-2D2Fak-2D2Bgwme5xjUHZnBktdy-2D2FMxf-2D2FPC7SRWgLZyWiBPKNj47snYli4Rrp8cQpB4mQioggiPx7heIqSjvKTf4EP1sGQUabaFHVQK-2D2FbX7icmhelfNBQv5PQrF1TI9W2t7GCXQFPr91Da-2D2FxlZK59hZd8h6EBXLbD0Hjwk-2D2F5CtR5zuzWX5p-2D2BYGzurVQFLIfLUzT-2D2BQgPFcQw16huPMRU2ZIsqZP-2D2FknJTxKHOTdbRZ3LHuWs0nLnDd7QFVQ-2D3D-2D3D&d=DwMFaQ&c=ODFT-G5SujMiGrKuoJJjVg&r=0tvMWX-bzQ6hfHu_gb7fV72M4DsvkbvFy5rvGJ6yInA&m=WI4MowFp-B0JOm4f7zWlDrBNpcH-e1TPYreEO9XoVE0&s=qMEAKz3W1K8edl8aiz6-YmEjX9CXa5bAjIU42gsVSBg&e=
+    (Paper)].
+    -- \[Journal\] N. Das, V. Deshpande, R. Bhattacharya, \" Optimal Transport based Tracking of Space Objects using Range Data from a Single Ranging Station. \",  *[https://arc.aiaa.org/loi/jgcd Journal of Guidance, Control, and Dynamics]* (Accepted, 2019)[https://www.researchgate.net/publication/329487928_Optimal_Transport_based_Tracking_of_Space_Objects_using_Range_Data_from_a_Single_Ranging_Station (Preprint)].
+
+- Fundings:\n
+-- Cloud Computing Based Robust Space Situational Awareness (2015-2018), PI: Raktim Bhattacharya, Co-PI: Bani Mallick. AFOSR DDDAS grant FA9550-15-1-0071, with Dr. Erik Blasch as the program manager
+-- Adaptive Markov Inference Game Optimization (AMIGO) for Rapid Discovery of Evasive Satellite Behaviors (2018) PI: Raktim Bhattacharya. AFRL project with Intelligent Fusion Technology, Inc and other partners.
+
+~~~
+{}{raw}
+<div align="center"> <img src="globe.svg" alt="Kiwi standing on oval" width="400" height="300" align="left"></div><div align="center">
+<img src="fig2.svg" alt="Kiwi standing on oval" width="400" height="300" align="right"></div>
+~~~
+
+== Counter sUAS
+MD5, in collaboration with Army Futures Command, hosted [https://a-hack-of-the-drones.devpost.com/ *A Hack of the Drones 2018*] at Capital Factory in downtown Austin, TX from September 28 – 30, 2018. The *A-Team*, of which I was a part of, worked on detection of sUAS which is not actively broadcasting or communicating, was among the three winners. We formed [https://aims-technologies.com AIMS Technologies, LLC], which received a contract of 15,000$, to further develop our concept in collaboration with MD5 (now called [https://www.nsin.us/ NSIN]).
+
+
+== Modeling, Control, and Imitation Learning
+
+
+- Publications:
+  -- \[Conference\] N.Das, R. Prakash, L. Behera \"Learning Object Manipulation from Demonstration through Vision for the 7-DOF Barrett WAM.\", 2016 IEEE First International Conference on Control, Measurement and Instrumentation (CMI),  8-10 Jan. 2016. [https://ieeexplore.ieee.org/abstract/document/7413777 (link)]
+  -- \[Conference\] N.Das, S. Dutta, S. Reddy, L. Behera \"A probabilistic framework of learning movement primitives from unstructured demonstrations.\", 2015 IEEE 13th International Conference on Industrial Informatics (INDIN), 22-24 July 2015. [https://ieeexplore.ieee.org/abstract/document/7281756 (link)]
+  -- \[Conference\] A.Mitra, N.Das, R. Samant, L. Behera \"Control of a 4 DoF Barrett WAM robot — Modeling, control synthesis and experimental validation.\", 2015 IEEE 13th International Conference on Industrial Informatics (INDIN), 22-24 July 2015. [https://ieeexplore.ieee.org/abstract/document/7413778 (link)]
+
+- Videos:
+~~~
+{}{raw}
+<div align="center"> <iframe width="400" height="300" src="//www.youtube.com/embed/AhPH4fLEGpI" frameborder="0" allowfullscreen align="left"></iframe> </div><div align="center"> <iframe width="400" height="300" src="//www.youtube.com/embed/WLxVG2RlI-o" frameborder="0" allowfullscreen align="right"></iframe> </div>
+~~~
+
+\n
