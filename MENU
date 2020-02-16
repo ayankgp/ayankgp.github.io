@@ -1,7 +1,7 @@
-{{<div class="menu-head">Ayan Chattopadhyay</div>}}
+{{<div class="menu-head"> </div>}}
 	Home		[index.html]
-#Acads\n
-#	Academics	[acads.html]
+#Academics\n
+#	Education	[acads.html]
 #	Courses		[courses.html]
 #	Achievements [awards.html]
 #Research\n
@@ -10,5 +10,5 @@
 #	Projects	[projects.html]
 #Other\n
 #	Extra-curriculars	[extracurrics.html]
-#	Resume [Resume_Ashudeep.pdf]
+#	Resume [Resume.pdf]
 #	Contact		[contact.html]
