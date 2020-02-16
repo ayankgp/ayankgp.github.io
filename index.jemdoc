@@ -1,26 +1,20 @@
 # jemdoc: menu{MENU}{index.html}
-= Ashudeep Singh
+= Ayan Chattopadhyay
 
 ~~~
-{}{img_left}{images/propic_13.jpeg}{Ashudeep Singh}{360px}
+{}{img_left}{images/Ayan.jpg}{Ashudeep Singh}{360px}
 Ph.D. candidate, Computer Science
 \nCornell University, Ithaca, NY
-\n\n[contact.html Contact]: [mail@ashudeepsingh.com]\n\n
+\n\n[contact.html Contact]: [mail@ayanc@princeton.edu]\n\n
 {{<ul class="icons">
-<li><a href="https://www.facebook.com/ashudeep.singh" class="fa fa-facebook solo"><span>Facebook</span></a></li>
-<li><a href="https://github.com/ashudeep" class="fa fa-github solo"><span>Github</span></a></li>
-<li><a href="http://www.twitter.com/AshudeepSingh" class="fa fa-twitter-square solo"><span>Google+</span></a></li>
-<li><a href="http://www.linkedin.com/in/ashudeepsingh" class="fa fa-linkedin solo"><span>LinkedIn</span></a></li>
+<li><a href="https://github.com/ayankgp" class="fa fa-github solo"><span>Github</span></a></li>
+<li><a href="https://www.linkedin.com/in/ayanchattopadhyay1989/" class="fa fa-linkedin solo"><span>LinkedIn</span></a></li>
 </ul>}}
 
-*New* Our new paper on [https://arxiv.org/abs/1902.04056 *Policy Learning for Fairness in Ranking*] has been accepted to NeurIPS 2019. We present a policy optimization approach for learning-to-rank and apply it to learning in the presence of fairness constraints. \n
-*New* I have the pleasure of working with [http://fernando.diaz.nyc/ Fernando Diaz] and the [https://www.microsoft.com/en-us/research/group/fate/ FATE: Fairness, Accountability, Transparency, and Ethics in AI] team at Microsoft Research Montreal during the summer of 2019.
+-Stuff-
 ~~~
 
 == About Me
-I am a Ph.D. Candidate in the department of Computer Science at Cornell University. I work in the area of Machine Learning with Prof. *[http://joachims.org Thorsten Joachims]*. I am particularly interested in Machine learning for interactive systems thinking about problems in the areas of Counterfactual Learning and Inference, and Personalization for interactive machine learning algorithms. Most recently, I have been focusing on Fairness, Interpretability and Transparency aspects of such algorithms.
-
-In the past, I completed my B.Tech.-M.Tech. dual degree in IIT Kanpur (India) where I worked with Prof. [http://www.cse.iitk.ac.in/users/amit/ Amitabha Mukerjee]. During my undergrad, I also worked with Prof. [http://www.cs.cmu.edu/~cprose/ Carolyn Rosé] on studying natural language aspects of collaborative learning agents at Carnegie Mellon University as a summer intern. I spent most of my childhood in the beautiful city of [http://en.wikipedia.org/wiki/Chandigarh Chandigarh] and then spent five wonderful years of my life at [www.iitk.ac.in IIT Kanpur] before moving to Cornell to start my PhD.
-
+I am a Ph.D. Candidate.
 
 \n\n(For more updated information, please contact me via email.)\n
