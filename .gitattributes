@@ -1,3 +1,6 @@
 *.py linguist-detectable=false
+*.pdf linguist-detectable=false
+*.conf linguist-detectable=false
+*.jemdoc linguist-detectable=false
 *.html linguist-detectable=true
 *.css linguist-detectable=true
