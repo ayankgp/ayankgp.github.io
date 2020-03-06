@@ -7,10 +7,10 @@ table#tlayout {
 }
 
 body {
-	background: white;
+	background: blue;
 	/*font-family: 'Ubuntu', sans-serif;*/
 	font-family: 'Open Sans', sans-serif;
-	font-size: 1.25em;
+	font-size: 1.6em;
 	padding-bottom: 8px;
 	margin: 0;
     -webkit-animation-delay: 0.1s;

@@ -3,32 +3,18 @@
 = Contact
 
 == Emails
-#- [ashudeep@cs.cornell.edu]
-#- [as3354@cornell.edu]
-#- [ashudeep21@gmail.com]
+- [ayanc@princeton.edu]
+- [ayankgpchatterjee@gmail.com]
 #~~~
 #{}{img_left}{images/emails.jpg}{Email ids}{75%}{}
 #~~~
-~~~
-{}{raw}
-<script language="JavaScript">
-var username = "mail";
-var hostname = "ashudeepsingh.com";
-var linktext = username + "@" + hostname ;
-document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a><br>");
-var username = "ashudeep";
-var hostname = "cs.cornell.edu";
-var linktext = username + "@" + hostname ;
-document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>");
-</script>
-~~~
 
 == Address
 ~~~
-{}{img_left}{images/gateshall.jpg}{Gates Hall}{350px}{}{http://www.cs.cornell.edu}
+{}{img_left}{images/frick.jpg}{Gates Hall}{500px}{}{https://chemistry.princeton.edu/}
 ==== Office
-349 Gates Hall, 107 Hoy Road
-\nIthaca, NY  14853
+252 Frick Chemistry Laboratory
+\nPrinceton, NJ  08544
 ~~~
 
 
@@ -36,12 +22,9 @@ document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" +
 ~~~
 {}{raw}
 <ul class="icons">
-<li><a href="https://www.facebook.com/ashudeep.singh" class="fa fa-facebook solo"><span>Facebook</span></a></li>
-<li><a href="https://github.com/ashudeep" class="fa fa-github solo"><span>Github</span></a></li>
+<li><a href="https://github.com/ayankgp" class="fa fa-github solo"><span>Github</span></a></li>
 <!--li><a href="#" class="fa fa-dribbble solo"><span>Dribbble</span></a></li-->
-<li><a href="http://www.twitter.com/ashudeepsingh" class="fa fa-twitter solo"><span>Twitter</span></a></li>
-<li><a href="http://plus.google.com/+AshudeepSingh" class="fa fa-google-plus-square solo"><span>Google+</span></a></li>
-<li><a href="http://www.linkedin.com/in/ashudeepsingh" class="fa fa-linkedin solo"><span>LinkedIn</span></a></li>
-<li><a href="http://instagram.com/ashudeep21" class="fa fa-instagram solo"><span>Instagram</span></a></li>
+<li><a href="https://www.linkedin.com/in/ayanchattopadhyay1989/" class="fa fa-linkedin solo"><span>LinkedIn</span></a></li>
+
 </ul>
 ~~~

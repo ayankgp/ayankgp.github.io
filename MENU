@@ -1,14 +1,15 @@
 {{<div class="menu-head"> </div>}}
 	Home		[index.html]
-#Academics\n
-#	Education	[acads.html]
+Academics\n
+	Education	[acads.html]
 #	Courses		[courses.html]
 #	Achievements [awards.html]
-#Research\n
-#	Publications	[pubs.html]
+Research\n
+#	Publications	[publication.html]
 #	Internships	[internships.html]
 #	Projects	[projects.html]
-#Other\n
+Other\n
 #	Extra-curriculars	[extracurrics.html]
-#	Resume [Resume.pdf]
-#	Contact		[contact.html]
+	Resume [Resume.pdf]
+	Contact		[contact.html]
+

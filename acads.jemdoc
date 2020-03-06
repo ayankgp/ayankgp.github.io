@@ -1,37 +1,32 @@
 # jemdoc: menu{MENU}{acads.html}
 = Academics
 
-== Engineering
-/*Indian Institute of Technology Kanpur*/
-\nB.Tech-M.Tech. Dual-Degree, Computer Science and Engineering (2010 -- present)
-- Bachelor of Technology. 
--- Cumulative Performance Index (CPI): +9.6/10.0+
-- Master of Technology 
--- Cumulative Performance Index (CPI): +10.0/10.0+
--- Ranked *first in the department* amongst the M.Tech. batch of 108 students.
--- Advisor: Prof. [http://www.cse.iitk.ac.in/users/amit/ Amitabha Mukerjee]
-- Awarded the /Academic Excellence Award/ for 2010-11, 2011-12 and 2012-13
+== Graduate Degree
+/*Princeton University*/
+/Princeton, NJ, USA/
+\nPh.D., Theoretical \& Computational Chemistry (Sep'2014 -- present)
+- Doctorate
+-- Grade Point Average (GPA): +3.52/4.0+
+-- Advisor: Prof. [http://chemlabs.princeton.edu/rabitz/ Herschel A. Rabitz]
+
+== Undergraduate Degree
+/*Indian Institute of Technology, Kharagpur*/
+\nInt. M.Sc., Chemistry (Jul'2009 -- May'2014)
+- Integrated Masters (\Bachelor of Science + Master of Science (Honors)\). 
+-- Grade Point Average (GPA): +8.72/10.0+
+-- Ranked *second in the department*
+-- Advisor: Prof. [http://www.chemistry.iitkgp.ac.in/~pkc/ Pratim K. Chattaraj]
+- Awarded the /INSPIRE Scholarship/ (Academic Fellowship, Dept. of Science & Technology, India) from 2009-14.
 - [courses.html List of courses].
-#~~~
-#{}{raw}
 
-#<courses>
-#<ul>
-#<li> Image Processing and Computer Vision </li>
-#<li> Natural Language Processing </li>
-#</ul>
-#</courses>
-#<button id="hide">Hide</button>
-#<button id="show">Show</button>
-#~~~
 
-== School
-G.M.S.S.S., Sector-35 D, Chandigarh (2008--2010)
+#== School
+#G.M.S.S.S., Sector-35 D, Chandigarh (2008--2010)
 
-- Scored *94%* marks in /All India Senior Secondary Certificate Examination (AISSCE) 2010/.
-- Subjects taken: Mathematics, Computer Science, Physics, Chemistry, English.
-- Awarded the certificate of Merit for being in the *Top 0.1%* all over India in English Core. 
+#- Scored *94%* marks in /All India Senior Secondary Certificate Examination (AISSCE) 2010/.
+#- Subjects taken: Mathematics, Computer Science, Physics, Chemistry, English.
+#- Awarded the certificate of Merit for being in the *Top 0.1%* all over India in English Core. 
 
-Guru Nanak Public School, Sector-36 D Chandigarh (1996--2008)
-- Scored *94.6%* marks in /All India Secondary School Examination (AISSE) 2008/
-- Subjects taken: Mathematics, Science, Social Science, Introductory Information Technology, English, Hindi.
+#Guru Nanak Public School, Sector-36 D Chandigarh (1996--2008)
+#- Scored *94.6%* marks in /All India Secondary School Examination (AISSE) 2008/
+#- Subjects taken: Mathematics, Science, Social Science, Introductory Information Technology, English, Hindi.
