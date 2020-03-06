@@ -14,7 +14,6 @@ body {
 }
 
 #layout-menu {
-	background: lightgray;
 	border: 1px solid #dddddd;
 	padding-top: 0.5em;
 	padding-left: 8px;
@@ -77,7 +76,6 @@ a:hover {
 }
 
 div.menu-category {
-	background: lightgray;
 	border-bottom: 1px solid gray;
 	margin-top: 0.8em;
 	padding-top: 0.2em;
